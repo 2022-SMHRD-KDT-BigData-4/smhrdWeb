@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="css/style_join.css">
+</head>
+<body>
+    <div class="board_wrap">
+        <h1 id="joinmain">회원가입</h1>
+        <form>
+            <dl>
+                <dt>이메일</dt>
+                <dd>
+                	<input type="text" name="mb_email" id="mb_email" placeholder="이메일 입력">
+                	<input type="button" value="중복 확인" onclick="emailCheck()">
+                </dd>
+            </dl>
+            <dl>
+                <dt>비밀번호</dt>
+                <dd><input type="password" name="mb_pw" class="pw1" id="pw1" placeholder="영문 숫자 특수문자 포함 8~20자 입력"></dd>
+            </dl>
+            <dl>
+                <dt>비밀번호 확인</dt>
+                <dd><input type="password" class="pw2" id="pw2" placeholder="비밀번호 재입력"></dd>
+                <dt></dt>
+                <dd><font id="chkpw" size="2"></font></dd>
+            </dl>
+            <dl>
+                <dt>이름</dt>
+                <dd><input type="text" name="mb_name" class="name" id="mb_name" placeholder="이름 입력"></dd>
+            </dl>
+            <dl>
+                <dt>닉네임</dt>
+                <dd>
+                    <input type="text" name="mb_nick" id="mb_nick" placeholder="닉네임 입력">
+                    <input type="button" value="중복 확인" onclick="nickCheck()">
+                </dd>
+            </dl>
+            <dl>
+                <dt>연락처</dt>
+                <dd><input type="tel" name="mb_phone" class="tel" id="mb_phone" placeholder="-없이 번호만 입력"></dd>
+            </dl>
+            <dl>
+                <dt>주소</dt>
+                <dd>
+                    <input type="text" name="mb_addr" id="mb_addr" class="joinaddress" placeholder="주소 입력"></dd>
+                </dd>
+            </dl>
+            <dl>
+                <dt>상세주소</dt>
+                <dd>
+                    <input type="text" class="detailaddress" id="mb_addr_dt" placeholder="상세 주소 입력">
+                </dd>
+            </dl>
+            <dl>
+                <dt>성별</dt>
+                <dd>
+                    <input type="radio" name="mb_gender" id="male" value="M">
+                    <label for="male">남자</label>
+                    <input type="radio" name="mb_gender" id="female" value="F">
+                    <label for="female">여자</label>
+                </dd>
+            </dl>
+            <dl>
+                <dt>수강과정</dt>
+                <dd>
+                    <select name="mb_curriculum">
+                        <option value="">수강과정선택</option>
+                        <option value="빅데이터" id="big">빅데이터</option>
+                        <option value="IOT융합" id="iot">IOT융합</option>
+                        <option value="인공지능" id="ai">인공지능</option>
+                    </select>
+                </dd>
+            </dl>
+            <dl>
+                <dt>소속반</dt>
+                <dd>
+                    <select name="mb_class">
+                        <option value="">소속반 선택</option>
+                        <option value="A" id="A">A</option>
+                        <option value="B" id="B">B</option>
+                        <option value="C" id="C">C</option>
+                        <option value="D" id="D">D</option>
+                    </select>
+                </dd>
+            </dl>
+            <dl>
+            	<dt>권한</dt>
+            	<dd>
+            	<input type="radio" name="mb_authority" value="A" checked onclick="return(false);"> 회원
+            	<input type="radio" name="mb_authority" value="Z" onclick="return(false);"> 관리자
+            	</dd>            
+            </dl>
+            <input type="submit" id="back" value="뒤로가기">
+            <input type="submit" id="join" value="회원가입" onclick="joinform_check();">
+            <!--
+                정의형 목록 스타일
+                dl : 정의 목록을 나타내는 태그 특정 용어에 대해 정의하는 제목과 그 제목에
+                대한 설명을 담는다. 기본 속성 = block요소
+                dt : 정의 되는 용어에 대한 제목을 나타낸다. 기본 속성 = block요소
+                dd : 정의된 제목에 대한 설명을 나타낸다. 기본 속성 = block요소
+                예)
+                <dl>
+                    <dt>정의 제목1</dt>
+                    <dt>정의 제목2</dt>
+                    <dt>정의 제목3</dt>
+
+                    <dd>정의 설명</dd>
+                </dl>
+            -->
+        </form>
+    </div>
+    <script>
+       $(function(){
+	        $('#pw1').keyup(function(){
+	        $('#chkpw').html('');
+	        });
+
+            $('#pw2').keyup(function(){
+
+	        if($('#pw1').val() != $('#pw2').val()){
+            $('#chkpw').html('비밀번호가 일치하지 않습니다.<br><br>');
+            $('#chkpw').attr('color', '#FF1515');
+            } else{
+            $('#chkpw').html('비밀번호가 일치합니다.<br><br>');
+            $('#chkpw').attr('color', '#0059DE');
+            }
+         });
+       });
+    </script>
+    <script>
+        //joinform_check 함수로 유효성 검사
+        function joinform_check() {
+         //변수에 담아주기
+        let uid = document.getElementById("mb_email");
+        let pwd = document.getElementById("pw1");
+        let repwd = document.getElementById("pw2");
+        let uname = document.getElementById("mb_name");
+        let nick = document.getElementById("mb_nick");
+        let female = document.getElementById("female");
+        let male = document.getElementById("male");
+        let mobile = document.getElementById("mb_phone");
+        let addr = document.getElementById("mb_addr");
+        let addr_dt = document.getElementById("mb_addr_dt");
+        let big = document.getElementById("big");
+        let iot = document.getElementById("iot");
+        let ai = document.getElementById("ai");
+        let A = document.getElementById("A");
+        let B = document.getElementById("B");
+        let C = document.getElementById("C");
+        let D = document.getElementById("D");
+
+        if (uid.value == "") { //해당 입력값이 없을 경우 같은말: if(!uid.value)
+            alert("이메일을 입력하세요.");
+            uid.focus(); //focus(): 커서가 깜빡이는 현상, blur(): 커서가 사라지는 현상
+            return false; //return: 반환하다 return false:  아무것도 반환하지 말아라 아래 코드부터 아무것도 진행하지 말것
+        };
+
+        if (pwd.value == "") {
+            alert("비밀번호를 입력하세요.");
+            pwd.focus();
+            return false;
+        };
+
+        //비밀번호 영문자+숫자+특수조합(8~25자리 입력) 정규식
+        let pwdCheck = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
+
+        if (!pwdCheck.test(pwd.value)) {
+            alert("비밀번호는 영문,숫자,특수문자 조합으로 8~20자리를 사용해야 합니다.");
+            pwd.focus();
+            return false;
+        };
+
+        if (repwd.value !== pwd.value) {
+            alert("비밀번호가 일치하지 않습니다.");
+            repwd.focus();
+            return false;
+        };
+
+        if (uname.value == "") {
+            alert("이름을 입력하세요.");
+            uname.focus();
+            return false;
+        };
+  
+        if (nick.value == "") {
+            alert("닉네임을 입력하세요.");
+            nick.focus();
+            return false;
+        };
+
+        if (!female.checked && !male.checked) { //둘다 미체크시
+            alert("성별을 선택해 주세요.");
+            female.focus();
+            return false;
+        }
+
+        let reg = /^[0-9]+/g; //숫자만 입력하는 정규식
+
+        if (!reg.test(mobile.value)) {
+            alert("전화번호는 숫자만 입력할 수 있습니다.");
+            mobile.focus();
+            return false;
+        }
+
+        if (addr.value == "") {
+            alert("주소를 입력하세요.");
+            addr.focus();
+            return false;
+        }
+  
+        if (addr_dt.value == "") {
+            alert("상세주소를 입력하세요.");
+            addr_dt.focus();
+            return false;
+        }
+  
+        if (!big.selected && !iot.selected && !ai.selected) { //셋다 미선택시
+            alert("수강과정을 선택하세요.");
+            big.focus(); //big, iot, ai -> 상관없다
+            return false;
+        }
+  
+        if (!A.selected && !B.selected && !C.selected && !D.selected) { //넷다 미선택시
+            alert("소속반을 선택하세요.");
+            A.focus(); //A, B, C, D-> 상관없다
+            return false;
+        }
+  
+        }
+    </script>
+</body>
+</html>
