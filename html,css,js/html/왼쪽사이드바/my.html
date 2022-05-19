@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스마트타임</title>
+    <link rel="stylesheet" href="/html,css,js/css/main.css">
+    <link rel="stylesheet" href="/html,css,js/css/media.css">
+    <link rel="stylesheet" href="/html,css,js/css/my.css">
+</head>
+<body>
+    <nav>
+        <div class="wrap">
+            <!-- 로고이미지,스마트타임 -->
+            <div id="logo">
+                <a href="/html,css,js/html/메인/main.html" class="mainimg"><img src="/이미지/시계.png"></a>
+                <p><span class="name multiple">스마트타임</span><span class="subname"
+                        onclick="location.href='/html,css,js/html/메인/main.html'">스마트인재개발원</span></p>
+            </div>
+            <!-- Nav 상단바 -->
+            <div id="cate">
+                <ul>
+                    <li class="menu">
+                        <a href="/html,css,js/html/게시판/notice.html">공지사항</a>
+                        <ul class="sub1">
+                            <li><a href="/html,css,js/html/게시판/notice.html">공지사항</a></li>
+                            <li><a href="/html,css,js/html/게시판/contest.html">공모전</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a href="/html,css,js/html/게시판/free.html">게시판</a>
+                        <ul class="sub2">
+                            <li><a href="/html,css,js/html/게시판/free.html">자유게시판</a></li>
+                            <li><a href="/html,css,js/html/게시판/question.html">질문게시판</a></li>
+                            <li><a href="/html,css,js/html/게시판/information.html">정보게시판</a></li>
+                            <li><a href="/html,css,js/html/게시판/anonymous.html">익명게시판</a></li>
+                            <li><a href="/html,css,js/html/게시판/smartfood.html">스마트맛집</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a href="/html,css,js/html/게시판/download.html">자료실</a>
+                        <ul class="sub3">
+                            <li><a href="/html,css,js/html/게시판/download.html">자료실</a></li>
+                            <li><a href="/html,css,js/html/게시판/source.html">공용소스</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a href="/html,css,js/html/게시판/timetable.html">시간표</a>
+                    </li>
+                    <li class="menu">
+                        <a href="/html,css,js/html/게시판/fan.html">팬게시판</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 스인재웹, 내정보 상단아이콘 -->
+            <div id="account">
+                <a href="https://smhrd.or.kr/?utm_source=google&utm_medium=search&utm_campaign=all_search&gclid=CjwKCAjwve2TBhByEiwAaktM1ERX55CmehfPPfe_N3y9vOM4MJ0_YBXbrmT8UcpBOxtIUTC4uMkcFhoCu2wQAvD_BwE"
+                    title="스인재" class="icon web">스인재</a>
+                <a href="/html,css,js/html/왼쪽사이드바/my.html" title="내 정보" class="icon my">내 정보</a>
+            </div>
+        </div>
+    </nav>
+    <div>
+        <div class="board_wrap">
+            <h1 id="my">내 정보</h1>
+            <form>
+                <dl>
+                    <dt>아이디</dt>
+                    <dd>
+                        <input type="text" name="mb_email" id="mb_email" placeholder="아이디 입력">
+                        <input type="button" value="중복 확인" onclick="emailCheck()">
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>비밀번호</dt>
+                    <dd><input type="password" name="mb_pw" class="pw1" id="pw1" placeholder="영문 숫자 특수문자 포함 8~20자 입력"></dd>
+                </dl>
+                <dl>
+                    <dt>비밀번호 확인</dt>
+                    <dd><input type="password" class="pw2" id="pw2" placeholder="비밀번호 재입력"></dd>
+                    <dt></dt>
+                    <dd><font id="chkpw" size="2"></font></dd>
+                </dl>
+                <dl>
+                    <dt>이름</dt>
+                    <dd><input type="text" name="mb_name" class="name" id="mb_name" placeholder="이름 입력"></dd>
+                </dl>
+                <dl>
+                    <dt>닉네임</dt>
+                    <dd>
+                        <input type="text" name="mb_nick" id="mb_nick" placeholder="닉네임 입력">
+                        <input type="button" value="중복 확인" onclick="nickCheck()">
+                    </dd>
+                </dl>
+
+                <input type="button" id="back" value="뒤로가기" onclick="location.href ='login.html'">
+                <input type="submit" id="join" value="회원가입" onclick="joinform_check();">
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스마트타임</title>
+    <link rel="stylesheet" href="/html,css,js/css/main.css">
+    <link rel="stylesheet" href="/html,css,js/css/media.css">
+    <link rel="stylesheet" href="/html,css,js/css/tableMain.css">
+
+    <script type="text/javascript" language='javascript'>
+
+        function flip() {
+            myimage.src = mainClass.children[mainClass.selectedIndex].getAttribute('url');
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <nav>
+        <div class="wrap">
+            <!-- 로고이미지,스마트타임 -->
+            <div id="logo">
+                <a href="/html,css,js/html/메인/main.html" class="mainimg"><img src="/이미지/시계.png"></a>
+                <p><span class="name multiple">스마트타임</span><span class="subname"
+                        onclick="location.href='/html,css,js/html/메인/main.html'">스마트인재개발원</span></p>
+            </div>
+            <!-- Nav 상단바 -->
+            <div id="cate">
+                <ul>
+                    <li class="menu">
+                        <a href="/html,css,js/html/게시판/notice.html">공지사항</a>
+                        <ul class="sub1">
+                            <li><a href="/html,css,js/html/게시판/notice.html">공지사항</a></li>
+                            <li><a href="/html,css,js/html/게시판/contest.html">공모전</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a href="/html,css,js/html/게시판/free.html">게시판</a>
+                        <ul class="sub2">
+                            <li><a href="/html,css,js/html/게시판/free.html">자유게시판</a></li>
+                            <li><a href="/html,css,js/html/게시판/question.html">질문게시판</a></li>
+                            <li><a href="/html,css,js/html/게시판/information.html">정보게시판</a></li>
+                            <li><a href="/html,css,js/html/게시판/anonymous.html">익명게시판</a></li>
+                            <li><a href="/html,css,js/html/게시판/smartfood.html">스마트맛집</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a href="/html,css,js/html/게시판/download.html">자료실</a>
+                        <ul class="sub3">
+                            <li><a href="/html,css,js/html/게시판/download.html">자료실</a></li>
+                            <li><a href="/html,css,js/html/게시판/source.html">공용소스</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu">
+                        <a href="/html,css,js/html/게시판/timetable.html">시간표</a>
+                    </li>
+                    <li class="menu">
+                        <a href="/html,css,js/html/게시판/fan.html">팬게시판</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="account">
+                <a href="https://smhrd.or.kr/?utm_source=google&utm_medium=search&utm_campaign=all_search&gclid=CjwKCAjwve2TBhByEiwAaktM1ERX55CmehfPPfe_N3y9vOM4MJ0_YBXbrmT8UcpBOxtIUTC4uMkcFhoCu2wQAvD_BwE"
+                    title="스인재" class="icon web">스인재</a>
+                <a href="/html,css,js/html/왼쪽사이드바/my.html" title="내 정보" class="icon my">내 정보</a>
+            </div>
+            <!-- 시간표 선택 -->
+            <aside><a href="/이미지/스인재로고.jpg"></a>
+                <form class="select">
+                    <select id="mainClass" onchange="javascript:flip();">
+                        <option url="/이미지/스인재로고.jpg">반을 선택하세요</option>
+                        <option url="/이미지/시간표/빅데이터A.png" value='dataA'>빅데이터A반</option>
+                        <option url="/이미지/시간표/빅데이터1.png" value='dataB'>빅데이터B반</option>
+                        <option url="/이미지/시간표/인공지능1.png" value='aiA'>인공지능A반</option>
+                        <option url="/이미지/시간표/인공지능2.png" value='aiB'>인공지능B반</option>
+                        <option url="/이미지/시간표/인공지능E.png" value='adE'>인공지능E반</option>
+                        <option url="/이미지/시간표/파이썬1.png" value='pythonA'>파이썬A반</option>
+                    </select>
+                </form>
+
+                <img src="/이미지/스인재로고.jpg" id="myimage">
+
+                <script type="text/javascript" language='javascript'>
+                    // place this after <body> to run it after body has loaded.
+                    var myimage = document.getElementById('myimage');
+                    var mainClass = document.getElementById('mainClass');
+                </script>
+            </aside>
+    </nav>
+</body>
+
+</html>

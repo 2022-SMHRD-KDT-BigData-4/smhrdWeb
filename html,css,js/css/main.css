@@ -1,0 +1,419 @@
+body.appwebview nav {
+    display: none;
+}
+
+/* 로고사진, 스마트타임,스마트인재개발원 */
+nav > div.wrap{
+    margin: 0px auto;
+    width: 1300px;
+    height: 100%;
+}
+
+#logo>a.mainimg {
+    float: left;
+    display: block;
+    margin: -12px 40px 10px 30px;
+    width: 40px;
+    height: 40px;
+}
+
+#logo>a>img {
+    width: 100px;
+    height: 100px;
+}
+
+#logo>p {
+    float: left;
+}
+
+#logo>p>span.name {
+    display: block;
+    color: royalblue;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#logo>p>span.name.multiple {
+    margin-top: 20px;
+    margin-left: 0px;
+    line-height: 15px;
+    font-size: 20px;
+}
+
+#logo>p>span.subname {
+    display: block;
+    line-height: 30px;
+    color: #292929;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* 내정보, 스마트인재 개발원 홈페이지 아이콘 */
+#account {
+    float: left;
+    margin-top:-77px;
+    margin-left: 85px;
+    width: auto;
+    height: 100%;
+    padding: 20px 0px;
+    box-sizing: border-box;
+    font-size: 0;
+}
+
+#account a {
+    position: relative;
+    display: inline-block;
+    margin-left: 4px;
+    height: 40px;
+    line-height: 40px;
+    box-sizing: border-box;
+    border: 1px solid #d6d6d6;
+    border-radius: 12px;
+    vertical-align: top;
+}
+
+#account a.icon {
+    width: 40px;
+    color: transparent;
+    font-size: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#account a.icon.web {
+    background-image: url('/이미지/스마트인재개발원홈페이지.png');
+    background-size: 24px 24px;
+}
+
+#account a.icon.my {
+    background-image: url('/이미지/내정보.png');
+    background-size: 24px 24px;
+}
+
+/* nav 상단 메뉴바 */
+#cate{
+    margin: 0 auto;
+    width: 900px;
+    height: 80px;
+    font: bold 20px "malgungothic";
+    /* 메뉴박스 메인메뉴 글자 움직이게 위아래 */
+    line-height: 90px;
+}
+#cate ul .menu{
+    height: auto;
+    /* 글자 시작 */
+    float: left;
+    /* 글자 간격 */
+    margin-left: 100px;
+    position: relative;
+    left: 5px;
+    z-index: 999;
+}
+#cate > ul > li:nth-child(1) > a{
+    color: royalblue;
+}
+#cate > ul > li:nth-child(2) > a{
+    color: royalblue;
+}
+#cate > ul > li:nth-child(3) > a{
+    color: royalblue;
+}
+#cate > ul > li:nth-child(4) > a{
+    color: royalblue;
+}
+#cate > ul > li:nth-child(5) > a{
+    color: royalblue;
+}
+/* 상단 카테고리 서브메뉴 */
+#cate ul li ul{
+    display: none;
+    width: 400px;
+    position: absolute;
+    font-size: 18px;
+    margin-top: -10px;
+    line-height: 50px;
+}
+.sub1 li a{
+    color: gold;
+    font-weight: bold;
+}
+.sub2 li a{
+    color: gold;
+    font-weight: bold;
+}
+.sub3 li a{
+    color: gold;
+    font-weight: bold;
+}
+#cate ul li:hover ul{
+    display: block;
+}
+#cate>ul>li>.sub1{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin-left: -10px;
+}
+#cate>ul>li>.sub2{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin-left: -20px;
+}
+#cate>ul>li>.sub3{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    margin-left: -20px;
+}
+
+/* 스인재 배너 */
+#submenu .wrap {
+    position: relative;
+    left: 10px;
+    margin: 0px auto;
+    padding: 0px 10px 10px 10px;
+    text-align: center;
+    cursor: pointer;
+    width: 1200px;
+}
+#submenu .wrap img{
+    width: 1215px;
+    height: 290px;
+}
+
+
+/* 하단 전체 */
+#container.article, #container.community {
+    position: relative;
+    margin: 25px auto 25px auto;
+}
+#container {
+    margin: 80px auto 0px auto;
+    width: 1230px;
+    height: auto;
+    box-sizing: border-box;
+}
+
+/* left side */
+#container > div.leftside{
+    position: absolute;
+    left: 25px;
+    top: 0px;
+    width: 175px;
+    height: 300px;
+}
+div.card {
+    margin-bottom: 5px;
+    border: 1px solid #d6d6d6;
+}
+#container div.card > form.logged{
+    padding: 15px;
+}
+#container div.card > form.logged > img.picture{
+    display: block;
+    margin: 15px auto;
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+}
+#container div.card > form.logged > p.nickname {
+    margin-bottom: 5px;
+    line-height: 20px;
+    white-space: nowrap;
+    color: #393939;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+#container div.card > form.logged > p.school {
+    line-height: px;
+    color: #a6a6a6;
+    font-size: 12px;
+    text-align: center;
+}
+#container div.card > form.logged > ul.buttons {
+    margin-top: 20px;
+}
+#container div.card > form.logged > ul.buttons > li {
+    float: left;
+    width: 50%;
+}
+#container div.card > form.logged > ul.buttons > li > a {
+    display: block;
+    margin-right: 5px;
+    border: 1px solid #d6d6d6;
+    border-radius: 3px;
+    line-height: 25px;
+    color: #737373;
+    font-size: 13px;
+    text-align: center;
+}
+#container div.card > form.logged > ul.buttons > li:last-child > a {
+    margin-right: 0;
+}
+
+#container > div.leftside div.card {
+    margin-bottom: 5px;
+    border: 1px solid #d6d6d6;
+}
+#container div.card > div.menus > a.myarticle {
+    background-image: url('/이미지/쓴글.png');
+}
+#container div.card > div.menus > a.mycommentarticle {
+    background-image: url('/이미지/댓글.png');
+}
+#container div.card > div.menus > a.myscrap {
+    background-image: url('/이미지/스크랩후.png');
+    border-bottom: 0;
+}
+#container div.card > div.menus > a {
+    display: block;
+    padding: 10px 0 10px 37px;
+    border-bottom: 1px solid #e3e3e3;
+    line-height: 20px;
+    box-sizing: border-box;
+    color: #444444;
+    font-size: 14px;
+    background-repeat: no-repeat;
+    background-size: 12px auto;
+    background-position: 15px center;
+} 
+
+/* 하단 main */
+#container > div.main {
+    position: relative;
+    left: 215px;
+    margin: 15px 0;
+    width: 700px;
+}
+#container > div.main div.card {
+    float: left;
+    margin: 0 5px 5px 0;
+    width: 338px;
+    border: 1px solid #e3e3e3;
+    overflow: hidden;
+    background-color: #fff;
+}
+#container div.card h3 {
+    padding: 10px;
+}
+#container div.card h3 > a {
+    line-height: 20px;
+    color: #c62917;
+    font-size: 14px;
+    font-weight: bold;
+}
+#container div.card > div.board > a {
+    font-weight: bold;
+    font-size: 13px;
+    display: block;
+    padding: 10px;
+    border-top: 1px solid #e3e3e3;
+}
+#container div.card > div.board > a.list > time {
+    float: right;
+    margin-left: 10px;
+    height: 17px;
+    line-height: 18px;
+    color: #a6a6a6;
+    font-size: 11px;
+    letter-spacing: 0;
+}
+/* #container div.card > div.board > a.list > p {
+    height: 17px;
+    line-height: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #444444;
+    font-size: 14px;
+} */
+#container hr {
+    clear: both;
+    width: 100%;
+    height: 0;
+    border: 0;
+} 
+
+/* right side */
+
+#container > div.rightside {
+    position: absolute;
+    right: -10px;
+    top: 0;
+    width: 325px;
+    height: 400px;
+}
+#container > div.rightside form.search {
+    margin-bottom: 5px;
+}
+#container > div.rightside form.search > input.text {
+    width: 100%;
+    height: 40px;
+    line-height: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 4px solid #d6d6d6;
+    color: #292929;
+    font-size: 14px;
+    background: transparent url('/이미지/돋보기.png') no-repeat right center;
+    background-size: 40px 40px;
+}
+#container div.card h3 {
+    padding: 10px;
+}
+#container div.card > div.board > a.article > p {
+    margin-bottom: 5px;
+    height: 36px;
+    line-height: 18px;
+    white-space: normal;
+    overflow: hidden;
+    color: #444444;
+    font-size: 13px;
+}
+#container div.card > div.board > a.article > p.small {
+    height: 32px;
+    line-height: 16px;
+    color: #737373;
+    font-size: 12px;
+}
+#container div.card > div.board > a.article > h4 {
+    float: left;
+    margin-right: 10px;
+    height: 14px;
+    line-height: 14px;
+    color: #a6a6a6;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0;
+}
+#container div.card > div.board > a.article > ul.status {
+    float: left;
+}
+#container div.card > div.board > a.article > ul.status > li.vote.active {
+    color: #c62917;
+    background-image: url('/이미지/돋보기.png');
+}
+#container div.card > div.board > a.article > ul.status > li.comment.active {
+    color: #0ca5af;
+    background-image: url('/이미지/댓글.png');
+}
+#container div.card > div.board > a.article > ul.status > li {
+    float: left;
+    margin-right: 5px;
+    padding-left: 15px;
+    height: 14px;
+    line-height: 14px;
+    color: #a6a6a6;
+    font-size: 11px;
+    letter-spacing: 0;
+    background-repeat: no-repeat;
+    background-size: 11px 11px;
+    background-position: left center;
+}
+/* 더보기 */
+#container > div.rightside > div:nth-child(3) > div > h3 > a > span{
+    float: right;
+    color: #a6a6a6;
+}
