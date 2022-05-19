@@ -4,10 +4,10 @@
     width: 800px;
     text-align: center;
     font-style: italic;
-    background-color: wheat;
+    background-color: royalblue;
 }
 #container > div > h1 > a{
-    color: royalblue;
+    color: whitesmoke;
 }
 /* 팬클럽게시판 틀 */
 #container div.title {
@@ -16,7 +16,7 @@
     padding: 15px;
     /* border: 1px solid #d6d6d6; */
     box-sizing: border-box;
-    border: 4px groove #FF8200;
+    border: 3px solid;
     border-radius: 20px;
 }
 
