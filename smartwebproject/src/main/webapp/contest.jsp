@@ -8,12 +8,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>공지사항</title>
+    <title>공모전</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/media.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/cate.css">  
@@ -26,7 +26,7 @@
             <div id="logo">
                 <a href="main.jsp" class="mainimg"><img src="image/시계.png"></a>
                 <p><span class="name multiple">스마트타임</span><span class="subname"
-                        onclick="main.jsp'">스마트인재개발원</span></p>
+                        onclick="location.href='main.jsp'">스마트인재개발원</span></p>
             </div>
             <!-- Nav 상단바 -->
             <div id="cate">
@@ -72,62 +72,34 @@
         </div>
     </nav>
     <!-- 공지사항 게시글작성 --> 
-
     <div id="container" class="article">
-            <%
-              Board b_vo = (Board)session.getAttribute("boardList");
-              BoardDAO dao = new BoardDAO();
-              List<Board> bdList = dao.selectAll();
-              System.out.println("글목록 : "+bdList.size());
-              int lsize=bdList.size();
-              pageContext.setAttribute("bdList",bdList);
-            %>
+    
         <div class="wrap title">
             <h1>
-                <a href="notice.jsp">공지사항 (<%out.print(lsize); %>)</a>
+                <a href="contest.jsp">공모전</a>
             </h1>
             <hr>
         </div>
         <div class="wrap articles">
-            <a id="writeArticleButton">새 글을 작성해주세요!</a>
-            <%-- 로그인 상태 유지 --%>
-   		<c:choose>
-            <c:when test="${empty loginMember}">
-               <h1 id='log2'>로그인 해주세요</h1>
-            </c:when>
-            <c:otherwise>
-               <h1 id='log1'>${loginMember.mb_nick }님환영합니다</h1>
-            </c:otherwise>
-         </c:choose>
-          	<%-- board 리스트에서 가져오기 --%>
-
-            <%--
-              Member m_vo = (Member)session.getAttribute("memberList");
-              MemberDAO mdao = new MemberDAO();
-              List<Member> mbList = mdao.selectMemberAll();
-              System.out.println("회원목록 : "+mbList.size());
-              pageContext.setAttribute("mbList",mbList);
-            --%>
-           <c:forEach var="i" items="${bdList }" varStatus="status">
-           <article>
-                <a class="article" href="board_notice.jsp">
-               		<div class="attachthumbnail"></div>
-                    <h2 class="medium"><c:out value="${i.article_title }"/></h2>
-                    <p class="small"><c:out value="${i.article_content }"/></p>
-                    <time class="small"><c:out value="${i.article_wdate }"/></time>
-                    <h3 class="small"><c:out value="${i.mb_nick }"/></h3>
+            
+            <article>
+                <a class="article" href="/html,css,js/html/게시판/board_contest.html">
+                    <div class="attachthumbnail"></div>
+                    <h2 class="medium">[취업지원실]2022 공무원 온라인 솔루션 참여자모집</h2>
+                    <p class="small">공무원 온라인 솔루션 강의 무료 지원(해커스) 자세한 사항은 취업진로포털을 확인하세요!</p>
+                    <time class="small">05/16 17:57</time>
+                    <h3 class="small">교징어</h3>
                     <ul class="status">
+                        <li title="조회수" class="hits">10</li>
                         <li title="좋아요" class="vote">4</li>
                         <li title="댓글" class="comment">2</li>
                     </ul>
                     <hr>
                 </a>
             </article>
-            </c:forEach>
         </div>
-<!-- 페이징처리 예정
-
- -->
+        
+    
     <!-- 오른쪽사이드 -->
         <div class="rightside">
             <form class="search">
@@ -170,22 +142,22 @@
                         [취업지원실]2022 공무원 온라인 솔루션 참여자모집
                         <hr>
                     </a>
-                    <a href="best.jsp" class="list">
+                    <a href="#" class="list">
                         <time>05/12 14:04</time>
                         충장로 맛집 리스트
                         <hr>
                     </a>
-                    <a href="best.jsp" class="list">
+                    <a href="#" class="list">
                         <time>05/11 21:50</time>
                         혼밥할때 좋은 영화
                         <hr>
                     </a>
-                    <a href="best.jsp" class="list">
+                    <a href="#" class="list">
                         <time>05/12 15:25</time>
                         비올때 듣기 좋은 노래
                         <hr>
                     </a>
-                    <a href="best.jsp" class="list">
+                    <a href="#" class="list">
                         <time>05/12 12:50</time>
                         20대 비타민 추천
                         <hr>
@@ -194,7 +166,7 @@
             </div>
         </div>
     </div>
-    <!-- <script src="assets/js/join.js?=ver123"></script> -->
+	<!-- <script src="assets/js/join.js?=ver123"></script> -->
     <script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -202,13 +174,7 @@
 	<script src="assets/js/skel.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<!-- 스크립트 주소 -->
-	<script>
-		let email = '${loginMember.mb_email}';
-		let nick = '${loginMember.mb_nick}';
-		$("#log1").hide();
-		$("#log2").hide();
-	</script>
-	<script src="assets/js/noticewrite.js"></script>
+	<script src="assets/js/contestwrite.js"></script>
 	<script src="assets/js/upload.js"></script>
 </body>
 </html>

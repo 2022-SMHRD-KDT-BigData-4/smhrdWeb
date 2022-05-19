@@ -79,6 +79,27 @@ public class MemberDAO {
 		return memberList;
 	}
 	
+	//수정 기능
+	public int updateMember(Member m_vo) {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		int cnt = 0;
+		try {
+			
+			cnt = sqlSession.update("com.smart.domain.MemberDAO.updateMember", m_vo);
+			System.out.println(cnt);
+			
+			if(cnt>0) {
+				sqlSession.commit();
+			}else {
+				sqlSession.rollback();
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally {
+			sqlSession.close();
+		}
+		return cnt;
+	}
 	/* // 수정 기능
 	public int updateMember(Member m_vo) {
 		SqlSession sqlSession = sqlSessionFactory.openSession();

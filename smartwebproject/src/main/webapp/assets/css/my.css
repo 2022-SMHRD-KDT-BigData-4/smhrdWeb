@@ -65,7 +65,7 @@ dl:nth-child(1) > dd > input[type=button]:nth-child(2){
     top: 4px;
 }
 /* 닉네임중복확인 */
-body > div > div > form > dl:nth-child(5) > dd > input[type=button]:nth-child(2){
+body > div > div > form > dl:nth-child(4) > dd > input[type=button]:nth-child(2){
     padding: 10px 10px;
     border: 0;
     border-radius: 2px;

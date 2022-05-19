@@ -13,10 +13,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>공지사항</title>
+    <title>자료실(IN)</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/media.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/cate.css">  
+    <link rel="stylesheet" type="text/css" href="./assets/css/board.css">  
 </head>
 <body>
     <!-- 상단 -->
@@ -26,7 +26,7 @@
             <div id="logo">
                 <a href="main.jsp" class="mainimg"><img src="image/시계.png"></a>
                 <p><span class="name multiple">스마트타임</span><span class="subname"
-                        onclick="main.jsp'">스마트인재개발원</span></p>
+                        onclick="location.href='main.jsp'">스마트인재개발원</span></p>
             </div>
             <!-- Nav 상단바 -->
             <div id="cate">
@@ -72,62 +72,97 @@
         </div>
     </nav>
     <!-- 공지사항 게시글작성 --> 
-
     <div id="container" class="article">
-            <%
-              Board b_vo = (Board)session.getAttribute("boardList");
-              BoardDAO dao = new BoardDAO();
-              List<Board> bdList = dao.selectAll();
-              System.out.println("글목록 : "+bdList.size());
-              int lsize=bdList.size();
-              pageContext.setAttribute("bdList",bdList);
-            %>
+    
         <div class="wrap title">
             <h1>
-                <a href="notice.jsp">공지사항 (<%out.print(lsize); %>)</a>
+                <a href="download.jsp">자료실</a>
             </h1>
             <hr>
         </div>
         <div class="wrap articles">
-            <a id="writeArticleButton">새 글을 작성해주세요!</a>
-            <%-- 로그인 상태 유지 --%>
-   		<c:choose>
-            <c:when test="${empty loginMember}">
-               <h1 id='log2'>로그인 해주세요</h1>
-            </c:when>
-            <c:otherwise>
-               <h1 id='log1'>${loginMember.mb_nick }님환영합니다</h1>
-            </c:otherwise>
-         </c:choose>
-          	<%-- board 리스트에서 가져오기 --%>
-
-            <%--
-              Member m_vo = (Member)session.getAttribute("memberList");
-              MemberDAO mdao = new MemberDAO();
-              List<Member> mbList = mdao.selectMemberAll();
-              System.out.println("회원목록 : "+mbList.size());
-              pageContext.setAttribute("mbList",mbList);
-            --%>
-           <c:forEach var="i" items="${bdList }" varStatus="status">
-           <article>
-                <a class="article" href="board_notice.jsp">
-               		<div class="attachthumbnail"></div>
-                    <h2 class="medium"><c:out value="${i.article_title }"/></h2>
-                    <p class="small"><c:out value="${i.article_content }"/></p>
-                    <time class="small"><c:out value="${i.article_wdate }"/></time>
-                    <h3 class="small"><c:out value="${i.mb_nick }"/></h3>
+            <article>
+                <a class="article">
+                    <img src="image/사용자정보.png" class="picture large">
+                    <div class="profile">
+                        <h3 class="large">교징어</h3>
+                        <time class="large">05/16 17:57</time>
+                    </div>
                     <ul class="status">
-                        <li title="좋아요" class="vote">4</li>
-                        <li title="댓글" class="comment">2</li>
+                        <li class="abuse">신고</li>
                     </ul>
                     <hr>
+                    <h2 class="large">[취업지원실]2022 공무원 온라인 솔루션 참여자모집</h2>
+                    <p class="large">
+                        공무원 온라인 솔루션 강의 무료 지원(해커스)
+                        <br>
+                        <br>
+                        자세한 사항은 취업진로포털을 확인하세요!
+                    </p>
+                    <div class="attaches full">
+                        <figure class="attach full">
+                            <img src="image/잠깐쓰는거 예시/취업지원실.jpg">
+                        </figure>
+                    </div>
+                    <hr>
+                    <ul class="status left">
+                        <li title="좋아요" class="like">4</li>
+                        <li title="댓글" class="comment">2</li>
+                        <li title="스크랩" class="scrap">1</li>
+                    </ul>
+                    <hr>
+                    <div class="buttons">
+                        <button type="submit"><span class="poslike">공감</span></button>
+                        <button type="submit"><span class="posscrap">스크랩</span></button>
+                    </div>
                 </a>
+                <div class="comments" style="display: block;">
+                    <!-- 댓글 부모 -->
+                    <article class="parent">
+                        <img src="image/사용자정보.png" class="picture medium">
+                        <h3 class="medium">교징어</h3>
+                        <ul class="status">
+                            <button type="submit"></button><li class="childcomment">대댓글</li></button>
+                            <button type="submit"><li class="commentvote">공감</li></button>
+                        </ul>
+                        <hr>
+                        <p class="large">항상 감사합니다</p>
+                        <time class="medium">05/15 21:44</time>
+                        <ul class="status commentvotestatus">
+                            <li class="vote commentvote" style="display: list-item;">2</li>
+                        </ul>
+                    </article>
+                    <!-- 댓글 자식 -->
+                    <article class="child">
+                        <img src="image/사용자정보.png" class="picture medium" >
+                        <h3 class="medium writer">교제</h3>
+                        <ul class="status">
+                            <button type="submit"><li class="commentvote">공감</li></button>
+                        </ul>
+                        <hr>
+                        <p class="large">
+                            도움이 되어서 다행이에요~~
+                        </p>
+                        <time class="medium">05/15 21:46</time>
+                        <ul class="status commentvotestatus">
+                            <li class="vote commentvote" style="display: list-item;">1</li>
+                        </ul>
+                    </article>
+                    <form action="#" method="#" class="writecomment">
+                        <input type="text" name="text" maxlength="300" autocomplete="off" placeholder="댓글을 입력하세요." class="text">
+                        <ul class="option">
+                            <li title="완료" class="submit"></li>
+                        </ul>
+                    </form>
+                </div>
             </article>
-            </c:forEach>
+            <div class="clearBothOnly"></div>
+            <div class="pagination">
+                <a id="goListButton" class="list" href="download.jsp">글 목록</a><br><br><br>
+            </div>
         </div>
-<!-- 페이징처리 예정
-
- -->
+        
+    
     <!-- 오른쪽사이드 -->
         <div class="rightside">
             <form class="search">
@@ -170,22 +205,22 @@
                         [취업지원실]2022 공무원 온라인 솔루션 참여자모집
                         <hr>
                     </a>
-                    <a href="best.jsp" class="list">
+                    <a href="#" class="list">
                         <time>05/12 14:04</time>
                         충장로 맛집 리스트
                         <hr>
                     </a>
-                    <a href="best.jsp" class="list">
+                    <a href="#" class="list">
                         <time>05/11 21:50</time>
                         혼밥할때 좋은 영화
                         <hr>
                     </a>
-                    <a href="best.jsp" class="list">
+                    <a href="#" class="list">
                         <time>05/12 15:25</time>
                         비올때 듣기 좋은 노래
                         <hr>
                     </a>
-                    <a href="best.jsp" class="list">
+                    <a href="#" class="list">
                         <time>05/12 12:50</time>
                         20대 비타민 추천
                         <hr>
@@ -194,7 +229,7 @@
             </div>
         </div>
     </div>
-    <!-- <script src="assets/js/join.js?=ver123"></script> -->
+	<!-- <script src="assets/js/join.js?=ver123"></script> -->
     <script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -202,13 +237,7 @@
 	<script src="assets/js/skel.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<!-- 스크립트 주소 -->
-	<script>
-		let email = '${loginMember.mb_email}';
-		let nick = '${loginMember.mb_nick}';
-		$("#log1").hide();
-		$("#log2").hide();
-	</script>
-	<script src="assets/js/noticewrite.js"></script>
-	<script src="assets/js/upload.js"></script>
+	<script src="assets/js/like.js"></script>
+	<script src="assets/js/scrap.js"></script>
 </body>
 </html>

@@ -71,7 +71,7 @@
             </div>
             <!-- 스인재 배너 -->
             <div id="submenu">
-                <div class="wrap" OnClick="location.href ='https://smhrd.or.kr/?utm_source=google&utm_medium=search&utm_campaign=all_search&gclid=CjwKCAjwve2TBhByEiwAaktM1ERX55CmehfPPfe_N3y9vOM4MJ0_YBXbrmT8UcpBOxtIUTC4uMkcFhoCu2wQAvD_BwE'">
+                <div class="wrap" OnClick="location.href ='https://smhrd.or.kr'">
                     <img src="image/스인재소개.png">
                 </div>
             </div>

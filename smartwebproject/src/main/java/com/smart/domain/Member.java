@@ -32,6 +32,13 @@ public class Member {
 	public Member() {
 
 	}
+	
+	public Member(String mb_email, String mb_pw, String mb_nick) {
+		super();
+		this.mb_email = mb_email;
+		this.mb_pw = mb_pw;
+		this.mb_nick = mb_nick;
+	}
 
 	public String getMb_email() {
 		return mb_email;

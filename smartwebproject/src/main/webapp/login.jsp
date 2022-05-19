@@ -8,14 +8,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="assets/css/loginmedia.css">
+<title>로그인</title>
+<link rel="stylesheet" type="text/css" href="assets/css/media.css">
 <link rel="stylesheet" type="text/css" href="assets/css/login.css">
 </head>
 <body>
 	<div id="container" class="login">
         <h1 class="logo">
-            <a href="main.jsp">스마트타임</a>
+            <a href="LoginTitle.jsp">스마트타임</a>
         </h1>
         <form action="LoginCon" method="post">
             <p class="input">

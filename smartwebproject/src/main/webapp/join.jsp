@@ -6,15 +6,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>form</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style_join.css">
+    <title>회원가입</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/join.css">
 </head>
 <body>
     <div class="board_wrap">
         <h1 id="joinmain">회원가입</h1>
         <form action="JoinCon" method="post">
             <dl>
-                <dt>이메일</dt>
+                <dt>아이디</dt>
                 <dd>
                 	<input type="text" name="mb_email" id="mb_email" placeholder="이메일 입력">
                 	<input type="button" value="중복 확인" onclick="emailCheck()">
@@ -39,15 +39,6 @@
                 <dd>
                     <input type="text" name="mb_nick" id="mb_nick" placeholder="닉네임 입력">
                     <input type="button" value="중복 확인" onclick="nickCheck()">
-                </dd>
-            </dl>
-            <dl>
-                <dt>성별</dt>
-                <dd>
-                    <input type="radio" name="mb_gender" id="male" value="M">
-                    <label for="male">남자</label>
-                    <input type="radio" name="mb_gender" id="female" value="F">
-                    <label for="female">여자</label>
                 </dd>
             </dl>
             <dl>

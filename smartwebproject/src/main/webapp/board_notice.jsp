@@ -35,39 +35,39 @@
                         <a href="notice.jsp">공지사항</a>
                         <ul class="sub1">
                             <li><a href="notice.jsp">공지사항</a></li>
-                            <li><a href="/html,css,js/html/게시판/contest.html">공모전</a></li>
+                            <li><a href="contest.jsp">공모전</a></li>
                         </ul>
                     </li>
                     <li class="menu">
-                        <a href="/html,css,js/html/게시판/free.html">게시판</a>
+                        <a href="free.jsp">게시판</a>
                         <ul class="sub2">
-                            <li><a href="/html,css,js/html/게시판/free.html">자유게시판</a></li>
-                            <li><a href="/html,css,js/html/게시판/question.html">질문게시판</a></li>
-                            <li><a href="/html,css,js/html/게시판/information.html">정보게시판</a></li>
-                            <li><a href="/html,css,js/html/게시판/anonymous.html">익명게시판</a></li>
-                            <li><a href="/html,css,js/html/게시판/smartfood.html">스마트맛집</a></li>
+                            <li><a href="free.jsp">자유게시판</a></li>
+                            <li><a href="question.jsp">질문게시판</a></li>
+                            <li><a href="information.jsp">정보게시판</a></li>
+                            <li><a href="anonymous.jsp">익명게시판</a></li>
+                            <li><a href="smartfood.jsp">스마트맛집</a></li>
                         </ul>
                     </li>
                     <li class="menu">
-                        <a href="/html,css,js/html/게시판/download.html">자료실</a>
+                        <a href="download.jsp">자료실</a>
                         <ul class="sub3">
-                            <li><a href="/html,css,js/html/게시판/download.html">자료실</a></li>
-                            <li><a href="/html,css,js/html/게시판/source.html">공용소스</a></li>
+                            <li><a href="download.jsp">자료실</a></li>
+                            <li><a href="source.jsp">공용소스</a></li>
                         </ul>
                     </li>
                     <li class="menu">
-                        <a href="/html,css,js/html/게시판/timetable.html">시간표</a>
+                        <a href="timetable.jsp">시간표</a>
                     </li>
                     <li class="menu">
-                        <a href="/html,css,js/html/게시판/fan.html">팬게시판</a>
+                        <a href="fan.jsp">팬게시판</a>
                     </li>
                 </ul>
             </div>
             <!-- 스인재웹, 내정보 상단아이콘 -->
             <div id="account">
-                <a href="https://smhrd.or.kr/?utm_source=google&utm_medium=search&utm_campaign=all_search&gclid=CjwKCAjwve2TBhByEiwAaktM1ERX55CmehfPPfe_N3y9vOM4MJ0_YBXbrmT8UcpBOxtIUTC4uMkcFhoCu2wQAvD_BwE"
+                <a href="https://smhrd.or.kr"
                     title="스인재" class="icon web">스인재</a>
-                <a href="/html,css,js/html/왼쪽사이드바/my.html" title="내 정보" class="icon my">내 정보</a>
+                <a href="my.jsp" title="내 정보" class="icon my">내 정보</a>
             </div>
         </div>
     </nav>
@@ -196,11 +196,11 @@
             <div class="card">
                 <div class="board">
                     <h3>
-                        <a href="/html,css,js/html/오른쪽사이드바/best.html">BEST게시판
+                        <a href="best.jsp">BEST게시판
                             <span>더보기</span>
                         </a>
                     </h3>
-                    <a href="/html,css,js/html/오른쪽사이드바/best.html" class="list">
+                    <a href="best.jsp" class="list">
                         <time>05/12 12:50</time>
                         [취업지원실]2022 공무원 온라인 솔루션 참여자모집
                         <hr>
