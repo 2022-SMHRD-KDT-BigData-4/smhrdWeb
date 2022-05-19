@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace : mapper 식별자(절대로 겹치면 안됨!) : sql을 실행하는 클래스(MemberDAO) 경로 -->
+<mapper namespace="com.smart.domain.MemberDAO">
+	<!-- id : 각 태그를 식별해줄 키값 -->
+	<!-- parameterType : 매개변수자리 -->
+	<!-- resultType : 반환값 -->
+	<!-- 회원가입 -->
+	<insert id="insertMember" parameterType="com.smart.domain.Member">
+		insert into tb_member(mb_email, mb_pw, mb_name, mb_nick, mb_gender, mb_curriculum, mb_class, mb_authority) values(#{mb_email}, #{mb_pw}, #{mb_name}, #{mb_nick}, #{mb_gender}, #{mb_currculum}, #{mb_class}, #{mb_authority})
+	</insert>
+	<select id="selectMember" resultType="com.smart.domain.Member" parameterType="com.smart.domain.Member">
+		select * from tb_member where mb_email=#{mb_email} and mb_pw=#{mb_pw}
+	</select>
+	<select id="selectMemberAll" resultType="com.smart.domain.Member">
+		select * from tb_member
+	</select>
+	<!--
+	<update id="updateMember" parameterType="com.smart.domain.Member">
+		update web_member set pw=#{pw}, tel=#{tel}, address=#{address} where email=#{email}
+	</update>
+
+	<delete id = "deleteMember" parameterType="String">
+		 delete from web_member where email = #{email}
+	</delete> -->
+</mapper>
