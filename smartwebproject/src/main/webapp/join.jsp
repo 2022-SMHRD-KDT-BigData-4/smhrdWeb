@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="board_wrap">
-        <h1 id="joinmain">회원가입</h1>
+        <h1 id="joinmain">회원가입1</h1>
         <form action="JoinCon" method="post">
             <dl>
                 <dt>이메일</dt>
