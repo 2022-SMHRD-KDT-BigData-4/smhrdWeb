@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*#joinmain{  /*회원가입글자 
+    margin-left: 30px;
+    text-align: center;
+}*/
+
+body {
+    background : #fff;
+}
+
+.board_wrap {
+    display: block;
+    margin: 30px auto 0 auto;
+    width: 1000px;
+    padding: 50px;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.board_wrap h1 {
+    padding-bottom: 12px;
+    border-bottom: 3px solid #000;
+    font-size: 32px;
+    letter-spacing: -2px;
+}
+
+/*.wrap form {
+    margin-left: 300px;  /* 폼 내용 위치 이동
+    margin-top: 30px;
+}*/
+
+.board_wrap form {
+    margin-top: 30px;
+}
+
+.board_wrap dl {
+    margin-top: 10px;
+    font-size: 0;
+    font-weight: bold;
+}
+
+.board_wrap dl:first-child{
+    margin-top: 0;
+}
+
+.board_wrap dt,
+.board_wrap dd {
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.board_wrap dt {
+    width: 20%
+}
+
+.board_wrap dd {
+    width: 80%
+}
+
+.board_wrap input[type="text"],
+.board_wrap input[type="password"],
+.board_wrap input[type="tel"],
+.board_wrap select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+.board_wrap input[type="button"] {
+    padding: 10px 10px;
+    border: 0;
+    border-radius: 2px;
+    background: #000;
+    font-weight: 600;
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(77, 77, 77, 0.3);
+}
+.board_wrap input[type="button"]:focus {
+    outline: 0;
+}
+.board_wrap input[type="button"]:hover {
+    background-color: rgba(80, 80, 80, 0.9);
+    cursor: pointer;
+}
+
+.board_wrap input[type="submit"] {
+    display: block;
+    margin: 30px -50px 0 100px;
+    padding:  10px 30px;
+    border: 0;
+    border-radius: 5px;
+    background: #000;
+    font-weight: 600;
+    color: #fff;
+    display: inline-block;
+}
+
+.board_wrap input[type="submit"]:hover {
+    background-color: rgba(80, 80, 80, 0.9);
+    cursor: pointer;
+}
+
+.board_wrap .joinaddress,
+.board_wrap .detailaddress{
+    width: 250px;
+}
