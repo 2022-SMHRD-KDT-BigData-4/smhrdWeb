@@ -140,19 +140,19 @@
 #container > div.wrap.articles > article > a > ul.status.left > li:nth-child(1) {
     padding-left: 15px;
     color: #c62917;
-    background-image: url('/이미지/좋아요후.png');
+    background-image: url('../../image/좋아요후.png');
 }
 /* 댓글 */
 #container > div.wrap.articles > article > a > ul.status.left > li:nth-child(2) {
     padding-left: 15px;
     color: #0ca5af;
-    background-image: url('/이미지/댓글.png');
+    background-image: url('../../image/댓글.png');
 }
 /* 스크랩 */
 #container > div.wrap.articles > article > a > ul.status.left > li:nth-child(3) {
     padding-left: 15px;
     color: #ffcc1c;
-    background-image: url('/이미지/스크랩.png');
+    background-image: url('../../image/스크랩.png');
 }
 
 /* 공감 및 스크랩 버튼 */
@@ -178,19 +178,19 @@
 }
 /* 공감전버튼 */
 #container > div.articles > article div.buttons span.poslike {
-    background-image: url('/이미지/좋아요전.png');  
+    background-image: url('../../image/좋아요전.png');  
 }
 /* 공감중버튼 */
 #container > div.articles > article div.buttons span.dislike {
-    background-image: url('/이미지/좋아요후.png');  
+    background-image: url('../../image/좋아요후.png');  
 }
 /* 스크랩전버튼 */
 #container > div.articles > article div.buttons span.posscrap {
-    background-image: url('/이미지/스크랩전.png');
+    background-image: url('../../image/스크랩전.png');
 }
 /* 스크랩중버튼 */
 #container > div.articles > article div.buttons span.disscrap {
-    background-image: url('/이미지/스크랩후.png');
+    background-image: url('../../image/스크랩후.png');
 }
 /* 공감, 스크랩 버튼스타일 */
 #container > div.wrap.articles > article > a > div.buttons > button:nth-child(1),
@@ -231,7 +231,7 @@
 }
 #container > div.articles > article form.writecomment ul.option li.submit {
     background-color: royalblue;
-    background-image: url('/이미지/글작성.png');
+    background-image: url('../../image/글작성.png');
 }
 #container > div.articles > article form.writecomment ul.option li {
     display: inline-block;
@@ -245,7 +245,7 @@
 /* 글목록 */
 #container > div.articles > div.pagination > a.list {
     float: left;
-    background-image: url('/이미지/목록.png');
+    background-image: url('../../image/목록.png');
 }
 #container > div.articles > div.pagination > a {
     display: block;
@@ -316,7 +316,7 @@
 #container > div.articles > article ul.status li.vote {
     padding-left: 15px;
     color: #c62917;
-    background-image: url('/이미지/좋아요후.png');
+    background-image: url('../../image/좋아요후.png');
 }
 #container > div.articles > article > div.comments article::after {
     content: "";
