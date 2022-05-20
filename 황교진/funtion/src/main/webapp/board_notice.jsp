@@ -1,5 +1,4 @@
 <%@page import="java.util.List"%>
-<%@page import="com.smart.domain.MemberDAO"%>
 <%@page import="com.smart.domain.Member"%>
 <%@page import="com.smart.domain.BoardDAO"%>
 <%@page import="com.smart.domain.Board"%>
@@ -89,7 +88,8 @@
                         <time class="large">05/16 17:57</time>
                     </div>
                     <ul class="status">
-                        <li class="abuse">신고</li>
+                        <button type="submit"><li class="correct">수정</li></button>
+                        <button type="submit"><li class="delete">삭제</li></button>
                     </ul>
                     <hr>
                     <h2 class="large">[취업지원실]2022 공무원 온라인 솔루션 참여자모집</h2>

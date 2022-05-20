@@ -193,8 +193,8 @@
     background-image: url('../../image/스크랩후.png');
 }
 /* 공감, 스크랩 버튼스타일 */
-#container > div.wrap.articles > article > a > div.buttons > button:nth-child(1),
-#container > div.wrap.articles > article > a > div.buttons > button:nth-child(2){
+#container > div.wrap.articles > article > a > ul:nth-child(3) > button:nth-child(1),
+#container > div.wrap.articles > article > a > ul:nth-child(3) > button:nth-child(2){
     border: 0px;
     outline: 0px;
     background-color: white;

@@ -1,5 +1,5 @@
+<%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.List"%>
-<%@page import="com.smart.domain.MemberDAO"%>
 <%@page import="com.smart.domain.Member"%>
 <%@page import="com.smart.domain.BoardDAO"%>
 <%@page import="com.smart.domain.Board"%>
@@ -7,6 +7,9 @@
     pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,8 +75,6 @@
         </div>
     </nav>
     <!-- 공지사항 게시글작성 --> 
-
-    <div id="container" class="article">
             <%
               Board b_vo = (Board)session.getAttribute("boardList");
               BoardDAO dao = new BoardDAO();
@@ -82,9 +83,12 @@
               int lsize=bdList.size();
               pageContext.setAttribute("bdList",bdList);
             %>
+            
+    <div id="container" class="article">
+
         <div class="wrap title">
             <h1>
-                <a href="notice.jsp">공지사항 (<%out.print(lsize); %>)</a>
+                <a href="notice.jsp">공지사항 </a>
             </h1>
             <hr>
         </div>
@@ -108,16 +112,17 @@
               System.out.println("회원목록 : "+mbList.size());
               pageContext.setAttribute("mbList",mbList);
             --%>
-           <c:forEach var="i" items="${bdList }" varStatus="status">
+           <c:forEach var="i" items="${bdList}" varStatus="status">
            <article>
                 <a class="article" href="board_notice.jsp">
                		<div class="attachthumbnail"></div>
                     <h2 class="medium"><c:out value="${i.article_title }"/></h2>
                     <p class="small"><c:out value="${i.article_content }"/></p>
-                    <time class="small"><c:out value="${i.article_wdate }"/></time>
-                    <h3 class="small"><c:out value="${i.mb_nick }"/></h3>
+                    <!-- 시간 성공  -->
+                    <time class="small"><c:out value="${fn:substring(i.article_wdate, 0, 16)}"/></time>
+                    <h3 class="small"><c:out value="${i.mb_nick}"/></h3>
                     <ul class="status">
-                        <li title="좋아요" class="vote">4</li>
+                        <li title="좋아요" class="vote"><c:out value="${i.article_likes}"/></li>
                         <li title="댓글" class="comment">2</li>
                     </ul>
                     <hr>
@@ -125,9 +130,7 @@
             </article>
             </c:forEach>
         </div>
-<!-- 페이징처리 예정
 
- -->
     <!-- 오른쪽사이드 -->
         <div class="rightside">
             <form class="search">
