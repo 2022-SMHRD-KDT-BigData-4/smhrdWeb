@@ -86,7 +86,7 @@
                             <p class="school">rywls18</p>
                             <ul class="buttons">
                                 <li><a href="my.jsp">내 정보</a></li>
-                                <li><a href="Login.jsp">로그아웃</a></li>
+                                <li><a href="login.jsp">로그아웃</a></li>
                             </ul>
                             <hr>
                         </form>
