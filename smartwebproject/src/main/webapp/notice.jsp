@@ -77,7 +77,7 @@
             <%
               Board b_vo = (Board)session.getAttribute("boardList");
               BoardDAO dao = new BoardDAO();
-              List<Board> bdList = dao.selectAll();
+              List<Board> bdList = dao.selectNotice();
               System.out.println("글목록 : "+bdList.size());
               int lsize=bdList.size();
               pageContext.setAttribute("bdList",bdList);

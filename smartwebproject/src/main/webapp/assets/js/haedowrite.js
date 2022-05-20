@@ -2,7 +2,7 @@
 let article = $(".wrap.articles")
 let writeArticleButton = "";
 $("#writeArticleButton").on("click", function () {
-        writeArticleButton += "<form action='YoungPyoWriteCon' method='post' class='write'>"
+        writeArticleButton += "<form action='BoardWriteCon' method='post' class='write'>"
         writeArticleButton += '<p><input name="article_title" autocomplete="off" placeholder="글 제목" class="title">'
         writeArticleButton += '</p>'
         writeArticleButton += '<p>'
@@ -17,13 +17,13 @@ $("#writeArticleButton").on("click", function () {
         writeArticleButton += '</form>'
         writeArticleButton += '</div>'
         writeArticleButton += "<div id='seq' name='article_seq'></div>"
-        writeArticleButton += "<select id='seq2' name='article_type'><option value='영표쌤게시판' selected/></select>" 
+        writeArticleButton += "<select id='seq2' name='article_type'><option value='해도쌤게시판' selected/></select>" 
         writeArticleButton += '<input type="text" id="seq3" name="mb_email" value='+email+'>'
         writeArticleButton += '<input type="text" id="seq4" name="mb_nick" value='+nick+'>'
         writeArticleButton += `<button type='submit' style='float: right; position: relative; bottom: 43px;'>`
         writeArticleButton += `<li title='완료' class='success'></li>`
         writeArticleButton += "</button>"
-        writeArticleButton += `<li title='목록' class='list' onclick='location.href="youngpyo.jsp"'></li>`
+        writeArticleButton += `<li title='목록' class='list' onclick='location.href="notice.jsp"'></li>`
         writeArticleButton += "</ul>"
         writeArticleButton += '<div class="clearBothOnly"></div>'
         writeArticleButton += "</form>"

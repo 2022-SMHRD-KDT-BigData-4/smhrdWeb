@@ -17,7 +17,7 @@ $("#writeArticleButton").on("click", function () {
         writeArticleButton += '</form>'
         writeArticleButton += '</div>'
         writeArticleButton += "<div id='seq' name='article_seq'></div>"
-        writeArticleButton += "<select id='seq2' name='article_type'><option value='운비쌤게시판' selected/></select>" 
+        writeArticleButton += "<select id='seq2' name='article_type'><option value='승환쌤게시판' selected/></select>" 
         writeArticleButton += '<input type="text" id="seq3" name="mb_email" value='+email+'>'
         writeArticleButton += '<input type="text" id="seq4" name="mb_nick" value='+nick+'>'
         writeArticleButton += `<button type='submit' style='float: right; position: relative; bottom: 43px;'>`

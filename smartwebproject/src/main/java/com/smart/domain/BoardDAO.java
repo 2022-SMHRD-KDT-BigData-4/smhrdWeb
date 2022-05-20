@@ -46,13 +46,13 @@ public class BoardDAO {
 		return selectBoard;
 	}
 
-	// 게시판 목록
-	public List<Board> selectAll() {
+	// 게시판 별 목록
+	public List<Board> selectNotice() {
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		List<Board> boardList = null;
 
 		try {
-			boardList = sqlSession.selectList("com.smart.domain.BoardDAO.selectAll");
+			boardList = sqlSession.selectList("com.smart.domain.BoardDAO.selectNotice");
 
 			if (boardList != null) {
 				sqlSession.commit();
@@ -65,6 +65,47 @@ public class BoardDAO {
 			sqlSession.close();
 		}
 		return boardList;
+	}
+	//영표쌤게시판
+	public List<Board> selectYoungpyo() {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		List<Board> selectYoungpyo = null;
+
+		try {
+			selectYoungpyo = sqlSession.selectList("com.smart.domain.BoardDAO.selectYoungpyo");
+
+			if (selectYoungpyo != null) {
+				sqlSession.commit();
+			} else {
+				sqlSession.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return selectYoungpyo;
+	}
+	
+	//영표쌤게시판
+	public List<Board> selectUnbi() {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		List<Board> selectUnbi = null;
+
+		try {
+			selectUnbi = sqlSession.selectList("com.smart.domain.BoardDAO.selectUnbi");
+
+			if (selectUnbi != null) {
+				sqlSession.commit();
+			} else {
+				sqlSession.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return selectUnbi;
 	}
 	//게시판 조회수
 	public int boardCount(Board b_vo) {

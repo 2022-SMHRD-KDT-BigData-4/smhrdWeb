@@ -40,6 +40,18 @@
   	<description></description>
   	<servlet-class>com.smart.controller.memberUpdateCon</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>YoungPyoWriteCon</servlet-name>
+  	<display-name>YoungPyoWriteCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smart.controller.YoungPyoWriteCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>UnbiWriteCon</servlet-name>
+  	<display-name>UnbiWriteCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smart.controller.UnbiWriteCon</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
   	<url-pattern>/JoinCon</url-pattern>
@@ -63,5 +75,13 @@
   <servlet-mapping>
   	<servlet-name>memberUpdateCon</servlet-name>
   	<url-pattern>/memberUpdateCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>YoungPyoWriteCon</servlet-name>
+  	<url-pattern>/YoungPyoWriteCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>UnbiWriteCon</servlet-name>
+  	<url-pattern>/UnbiWriteCon</url-pattern>
   </servlet-mapping>
 </web-app>

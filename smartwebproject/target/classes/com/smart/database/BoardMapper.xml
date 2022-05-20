@@ -12,10 +12,22 @@
 		insert into tb_community(article_seq, article_title, article_content, article_cnt, mb_email, mb_nick, article_type, article_likes, article_wdate, article_rdate) values(tb_community_SEQ.nextval, #{article_title}, #{article_content}, #{article_cnt}, #{mb_email}, #{mb_nick}, #{article_type}, #{article_likes}, sysdate, sysdate)
 	</insert>
 	<!-- 공지사항(hide) -->
-	<select id="selectAll" parameterType="String" resultType="com.smart.domain.Board">
+	<select id="selectNotice" parameterType="String" resultType="com.smart.domain.Board">
 		select article_seq, article_title, article_content, article_cnt, mb_email, mb_nick, article_type, article_likes, article_wdate, article_rdate
 		from tb_community
 		where article_type='공지사항'
+		order by article_seq desc
+	</select>
+	<select id="selectYoungpyo" parameterType="String" resultType="com.smart.domain.Board">
+		select article_seq, article_title, article_content, article_cnt, mb_email, mb_nick, article_type, article_likes, article_wdate, article_rdate
+		from tb_community
+		where article_type='영표쌤게시판'
+		order by article_seq desc
+	</select>
+	<select id="selectUnbi" parameterType="String" resultType="com.smart.domain.Board">
+		select article_seq, article_title, article_content, article_cnt, mb_email, mb_nick, article_type, article_likes, article_wdate, article_rdate
+		from tb_community
+		where article_type='운비쌤게시판'
 		order by article_seq desc
 	</select>
 	<!-- 게시판 조회수 -->
