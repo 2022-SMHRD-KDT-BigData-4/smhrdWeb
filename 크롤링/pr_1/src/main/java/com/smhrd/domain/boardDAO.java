@@ -31,26 +31,6 @@ public class boardDAO {
 		}
 		return boardList;
 	}
-	// 전체게시판 contents
-	public List<tb_board> contentsALl() {
-		SqlSession sqlSession = sqlSessionFactory.openSession();
-		List<tb_board> cboardList = null;
-		try {
-			cboardList = sqlSession.selectList("com.smhrd.domain.boardDAO.contentsALl");
-			if (cboardList!=null) {
-				sqlSession.commit();
-
-			} else {
-				sqlSession.rollback();
-
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			sqlSession.close();
-		}
-		return cboardList;
-	}
-
+	
 
 }
