@@ -1,5 +1,47 @@
-table{
-    border: 1px;
-    border-color: aquamarine;
+#container > div.wrap.articles > table{
+    border: 0px;
+    color: black;
+    width: 828px;
+    border-spacing: 13px;
+    position: relative;
+    right: 15px;
+}
+#container > div.wrap.articles > table > tbody > tr{
     text-align: center;
+    font-weight: bold;
+    
+}
+#container > div.wrap.articles > table > tbody > tr > td{
+    color: black;
+    height: 50px;
+    border: 3px solid;
+}
+/* 상단 카테고리들 */
+#container > div.wrap.articles > table > tbody > tr:nth-child(1){
+    background-color: skyblue;
+}
+/* 번호 */
+#container > div.wrap.articles > table > tbody > tr:nth-child(1) > td:nth-child(1){
+    width: 40px;
+}
+/* 맛집 */
+#container > div.wrap.articles > table > tbody > tr:nth-child(1) > td:nth-child(2){
+    width: 170px;
+}
+/* 분류 */
+#container > div.wrap.articles > table > tbody > tr:nth-child(1) > td:nth-child(4){
+    width: 70px;
+}
+/* 구경하기 */
+#container > div.wrap.articles > table > tbody > tr:nth-child(1) > td:nth-child(5),
+#container > div.wrap.articles > table > tbody > tr:nth-child(2) > td:nth-child(5){
+    width: 65px;
+}
+/* 버튼  */
+#container > div.wrap.articles > table > tbody > tr:nth-child(2) > td:nth-child(5) > button{
+    border: 0px;
+    outline: 0px;
+    font-size: 18px;
+    font-weight: bold;
+    background-image: url('/이미지/페이지이동.png');
 }

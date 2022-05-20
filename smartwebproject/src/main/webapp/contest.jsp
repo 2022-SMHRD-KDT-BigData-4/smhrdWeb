@@ -83,7 +83,7 @@
         <div class="wrap articles">
             
             <article>
-                <a class="article" href="/html,css,js/html/게시판/board_contest.html">
+                <a class="article" href="board_contest.jsp">
                     <div class="attachthumbnail"></div>
                     <h2 class="medium">[취업지원실]2022 공무원 온라인 솔루션 참여자모집</h2>
                     <p class="small">공무원 온라인 솔루션 강의 무료 지원(해커스) 자세한 사항은 취업진로포털을 확인하세요!</p>

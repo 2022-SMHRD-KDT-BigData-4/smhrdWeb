@@ -12,7 +12,7 @@ select {
     width: 150px;
     padding: 0.8em 0.5em;
     border: 2px solid royalblue;
-    background: url(../../assets/image/시간표/arrow.jpg) no-repeat 95% 50%;
+    background: url(/img/arrow.jpg) no-repeat 95% 50%;
     border-radius: 5px;
     -webkit-appearance: none;
     -moz-appearance: none;

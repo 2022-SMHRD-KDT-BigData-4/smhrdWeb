@@ -1,31 +1,54 @@
-<%@page import="java.util.List"%>
-<%@page import="com.smart.domain.MemberDAO"%>
-<%@page import="com.smart.domain.Member"%>
-<%@page import="com.smart.domain.BoardDAO"%>
-<%@page import="com.smart.domain.Board"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" isELIgnored="false"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.sql.DriverManager"%>
+<%@ page import="java.sql.Connection"%>
+<%@ page import="java.sql.Statement"%>
+<%@ page import="java.sql.ResultSet"%>
+
+<%!// 변수 선언
+	Connection conn = null;
+	Statement stmt = null;
+	ResultSet rs = null;
+	String uid = "campus_a_0509_1";
+	String pwd = "smhrd1";
+	String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:XE";
+	String sql = "select * from tb_restaurant";%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>스마트맛집</title>
-    <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/media.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/cate.css">
-    <!-- <link rel="stylesheet" type="text/css" href="./assets/css/smartfoodtable.css"> -->  
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/media.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/cate.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/smartfoodtable.css">
+    <script src="/jquery-3.6.0.js"></script>
 </head>
+<style>
+    #container div.title {
+    text-align: center !important; 
+    background-color: skyblue;
+/* } */
+</style>
 <body>
-    <!-- 상단 -->
+	<%
+		try {
+		// 데이터베이스를 접속하기 위한 드라이버 SW 로드
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		// 데이터베이스에 연결하는 작업 수행
+		conn = DriverManager.getConnection(url, uid, pwd);
+		// 쿼리를 생성gkf 객체 생성
+		stmt = conn.createStatement();
+		// 쿼리 생성
+		rs = stmt.executeQuery(sql);
+	%>
+	 <!-- 상단 -->
     <nav>
         <div class="wrap">
             <!-- 로고이미지,스마트타임 -->
             <div id="logo">
-                <a href="main.jsp" class="mainimg"><img src="image/시계.png"></a>
+                <a href="#" class="mainimg"><img src="./image/시계.png"></a>
                 <p><span class="name multiple">스마트타임</span><span class="subname"
                         onclick="location.href='main.jsp'">스마트인재개발원</span></p>
             </div>
@@ -72,47 +95,58 @@
             </div>
         </div>
     </nav>
+    
     <!-- 공지사항 게시글작성 --> 
     <div id="container" class="article">
     
         <div class="wrap title">
             <h1>
-                <a href="smartfood.jsp">스마트맛집</a>
+                <a href="smartfood.jsp" style="text-align: center !important;">🍚 스마트맛집 🍚</a>
             </h1>
             <hr>
         </div>
-        <div class="wrap articles">
-            <table>
-                <th>스마트맛집</th>
-                <tr>
-                    <th>번호</th>
-                    <th>상호명</th>
-                    <th>주소</th>
-                    <th>분류</th>
-                </tr>
-                <tr></tr>
-            </table>
+	<table border="5">
+		<tr>
+			<td>번호</td>
+			<td>맛&nbsp&nbsp&nbsp&nbsp집</td>
+			<td>주&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp소</td>
+			<td>분&nbsp&nbsp류</td>
+			<td>리뷰보기</td>
+		</tr>
+		<%
+			while (rs.next()) {
+		%>
+		<tr>
+			<td><%=rs.getString("num")%></td>
+			<td><%=rs.getString("name")%></td>
+			<td><%=rs.getString("address")%></td>
+			<td><%=rs.getString("category")%></td>
+			 <td><button onclick="location.href='<%=rs.getString("link")%>'">이동</button></td>
+		</tr>
+	
 
-
-            <!-- <article>
-                <a class="article" href="/html,css,js/html/게시판/board_smartfood.html">
-                    <div class="attachthumbnail"></div>
-                    <h2 class="medium">[취업지원실]2022 공무원 온라인 솔루션 참여자모집</h2>
-                    <p class="small">공무원 온라인 솔루션 강의 무료 지원(해커스) 자세한 사항은 취업진로포털을 확인하세요!</p>
-                    <time class="small">05/16 17:57</time>
-                    <h3 class="small">교징어</h3>
-                    <ul class="status">
-                        <li title="조회수" class="hits">10</li>
-                        <li title="좋아요" class="vote">4</li>
-                        <li title="댓글" class="comment">2</li>
-                    </ul>
-                    <hr>
-                </a>
-            </article> -->
-        </div>
-        
-    
-    <!-- 오른쪽사이드 -->
+	<%
+		}
+	} catch (Exception e) {
+	e.printStackTrace();
+	} finally {
+	try {
+	if (rs != null) {
+		rs.close();
+	}
+	if (stmt != null) {
+		stmt.close();
+	}
+	if (conn != null) {
+		conn.close();
+	}
+	} catch (Exception e) {
+	e.printStackTrace();
+	}
+	}
+	%>
+	</table>
+	  <!-- 오른쪽사이드 -->
         <div class="rightside">
             <form class="search">
                 <input type="text" name="keyword" plcaeholder="전체 게시판의 글을 검색하세요!" class="text">
@@ -178,7 +212,7 @@
             </div>
         </div>
     </div>
-	<!-- <script src="assets/js/join.js?=ver123"></script> -->
+<!-- <script src="assets/js/join.js?=ver123"></script> -->
     <script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>

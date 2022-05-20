@@ -8,15 +8,15 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>공지사항(IN)</title>
+    <title>동원썜게시판</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/media.css">
-    <link rel="stylesheet" type="text/css" href="./assets/css/board.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/cate.css">  
 </head>
 <body>
     <!-- 상단 -->
@@ -76,91 +76,28 @@
     
         <div class="wrap title">
             <h1>
-                <a href="notice.jsp">공지사항</a>
+                <a href="dongwon.jsp">동원쌤게시판</a>
             </h1>
             <hr>
         </div>
         <div class="wrap articles">
+            <a id="writeArticleButton" href="#">새 글을 작성해주세요!</a>
+            
             <article>
-                <a class="article">
-                    <img src="image/사용자정보.png" class="picture large">
-                    <div class="profile">
-                        <h3 class="large">교징어</h3>
-                        <time class="large">05/16 17:57</time>
-                    </div>
+                <a class="article" href="board_dongwon.jsp">
+                    <div class="attachthumbnail"></div>
+                    <h2 class="medium">[취업지원실]2022 공무원 온라인 솔루션 참여자모집</h2>
+                    <p class="small">공무원 온라인 솔루션 강의 무료 지원(해커스) 자세한 사항은 취업진로포털을 확인하세요!</p>
+                    <time class="small">05/16 17:57</time>
+                    <h3 class="small">교징어</h3>
                     <ul class="status">
-                        <button type="submit"><li class="correct">수정</li></button>
-                        <button type="submit"><li class="delete">삭제</li></button>
-                    </ul>
-                    <hr>
-                    <h2 class="large">[취업지원실]2022 공무원 온라인 솔루션 참여자모집</h2>
-                    <p class="large">
-                        공무원 온라인 솔루션 강의 무료 지원(해커스)
-                        <br>
-                        <br>
-                        자세한 사항은 취업진로포털을 확인하세요!
-                    </p>
-                    <div class="attaches full">
-                        <figure class="attach full">
-                            <img src="image/잠깐쓰는거 예시/취업지원실.jpg">
-                        </figure>
-                    </div>
-                    <hr>
-                    <ul class="status left">
-                        <li title="좋아요" class="like">4</li>
+                        <li title="조회수" class="hits">10</li>
+                        <li title="좋아요" class="vote">4</li>
                         <li title="댓글" class="comment">2</li>
-                        <li title="스크랩" class="scrap">1</li>
                     </ul>
                     <hr>
-                    <div class="buttons">
-                        <button type="submit"><span class="poslike">공감</span></button>
-                        <button type="submit"><span class="posscrap">스크랩</span></button>
-                    </div>
                 </a>
-                <div class="comments" style="display: block;">
-                    <!-- 댓글 부모 -->
-                    <article class="parent">
-                        <img src="image/사용자정보.png" class="picture medium">
-                        <h3 class="medium">교징어</h3>
-                        <ul class="status">
-                            <button type="submit"></button><li class="childcomment">대댓글</li></button>
-                            <button type="submit"><li class="commentvote">공감</li></button>
-                        </ul>
-                        <hr>
-                        <p class="large">항상 감사합니다</p>
-                        <time class="medium">05/15 21:44</time>
-                        <ul class="status commentvotestatus">
-                            <li class="vote commentvote" style="display: list-item;">2</li>
-                        </ul>
-                    </article>
-                    <!-- 댓글 자식 -->
-                    <article class="child">
-                        <img src="image/사용자정보.png" class="picture medium" >
-                        <h3 class="medium writer">교제</h3>
-                        <ul class="status">
-                            <button type="submit"><li class="commentvote">공감</li></button>
-                        </ul>
-                        <hr>
-                        <p class="large">
-                            도움이 되어서 다행이에요~~
-                        </p>
-                        <time class="medium">05/15 21:46</time>
-                        <ul class="status commentvotestatus">
-                            <li class="vote commentvote" style="display: list-item;">1</li>
-                        </ul>
-                    </article>
-                    <form action="#" method="#" class="writecomment">
-                        <input type="text" name="text" maxlength="300" autocomplete="off" placeholder="댓글을 입력하세요." class="text">
-                        <ul class="option">
-                            <li title="완료" class="submit"></li>
-                        </ul>
-                    </form>
-                </div>
             </article>
-            <div class="clearBothOnly"></div>
-            <div class="pagination">
-                <a id="goListButton" class="list" href="notice.jsp">글 목록</a><br><br><br>
-            </div>
         </div>
         
     
@@ -197,11 +134,11 @@
             <div class="card">
                 <div class="board">
                     <h3>
-                        <a href="best.jsp">BEST게시판
+                        <a href="best..jsp">BEST게시판
                             <span>더보기</span>
                         </a>
                     </h3>
-                    <a href="best.jsp" class="list">
+                    <a href="best..jsp" class="list">
                         <time>05/12 12:50</time>
                         [취업지원실]2022 공무원 온라인 솔루션 참여자모집
                         <hr>
@@ -230,7 +167,7 @@
             </div>
         </div>
     </div>
-        <!-- <script src="assets/js/join.js?=ver123"></script> -->
+    <!-- <script src="assets/js/join.js?=ver123"></script> -->
     <script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -238,7 +175,7 @@
 	<script src="assets/js/skel.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<!-- 스크립트 주소 -->
-	<script src="assets/js/like.js"></script>
-	<script src="assets/js/scrap.js"></script>
+	<script src="assets/js/dongwonwrite.js"></script>
+	<script src="assets/js/upload.js"></script>
 </body>
 </html>

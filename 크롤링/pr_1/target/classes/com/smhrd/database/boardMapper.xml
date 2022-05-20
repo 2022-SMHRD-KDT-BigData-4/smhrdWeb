@@ -4,7 +4,8 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.smhrd.domain.boardDAO">
 	<select id ="titleAll" parameterType = "String" resultType="com.smhrd.domain.tb_board">
-	select cro_title, cro_img, cro_field, cro_date from tb_competition
+	select cro_title, cro_img, cro_field, TO_CHAR(cro_date, 'YYYY-MM-DD HH24:MI:SS') from tb_competition
+	
 	</select>
 	<select id = "contentsALl" parameterType = "String" resultType = "com.smhrd.domain.tb_board">
 		select cro_title, cro_img ,cro_host	,cro_field ,cro_attend ,cro_app ,cro_period	,cro_area ,cro_awards ,cro_home	,crom_apply

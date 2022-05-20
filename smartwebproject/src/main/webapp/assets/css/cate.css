@@ -33,7 +33,7 @@
     cursor: text;
     color: #a6a6a6;
     font-size: 14px;
-    background: #f9f9f9 url('../../image/글작성.png') no-repeat right;
+    background: #f9f9f9 url('/이미지/글작성.png') no-repeat right;
     background-size: 30px 30px;
 }
 
@@ -79,18 +79,13 @@
     height: 0 !important;
 }
 
-#container > div.articles > form.write ul.option li.attach {
-    background-image: url('../../image/클립.png');
-    background-size: 20px 20px;
-    background-color: royalblue;
-}
 #container > div.wrap.articles > form > ul > button:nth-child(1){
     float: left;
 }
 #container > div.articles > form.write ul.option li.list {
     top: -40px;
     float: right;
-    background-image: url('../../image/목록.png');
+    background-image: url(/이미지/목록.png);
     background-size: 25px 25px;
     position: relative;
     right: 6px;
@@ -100,14 +95,13 @@
     float: right;
     position: relative;
     bottom: 43px;
-} 
-
+}
 #container > div.wrap.articles > form > ul > button:nth-child(3){
     float: right !important;
 }
 #container > div.articles > form.write ul.option li.success {
     background-color: #c62917;
-    background-image: url('../../image/글작성.png');
+    background-image: url('/이미지/글작성.png');
     background-size: 25px 25px;
 }
 
@@ -140,7 +134,7 @@
     width: 80px;
     height: 80px;
     background-size: cover;
-    background-image: url('../../image/시계.png');
+    background-image: url('/이미지/시계.png');
 }
 /* 게시글제목 */
 #container > div.articles > article h2.medium {
@@ -223,21 +217,21 @@
 #container > div.articles > article ul.status li.hits {
     padding-left: 20px;
     color: #c62917;
-    background-image: url('../../image/조회수.png');
+    background-image: url('/이미지/조회수.png');
     background-size: 15px 15px;
 }
 /* 좋아요 */
 #container > div.articles > article ul.status li.vote {
     padding-left: 20px;
     color: #c62917;
-    background-image: url('../../image/좋아요2.png');
+    background-image: url('/이미지/좋아요2.png');
     background-size: 15px 15px;
 }
 /* 쓴글 */
 #container > div.articles > article ul.status li.comment {
     padding-left: 20px;
     color: #0ca5af;
-    background-image: url('../../image/쓴글.png');
+    background-image: url('/이미지/쓴글.png');
     background-size: 15px 15px;
 }
 /* 이미지 파일선택 */
@@ -268,7 +262,7 @@
     margin-left: 5px;
 }
 .fa-minus-square:before {
-    content: url("../../image/마이너스\ 줄이기.png");
+    content: url("/이미지/마이너스\ 줄이기.png");
     position: relative;
     top: 14px;
 }
