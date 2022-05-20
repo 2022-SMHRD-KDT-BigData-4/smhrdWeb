@@ -52,6 +52,66 @@
   	<description></description>
   	<servlet-class>com.smart.controller.UnbiWriteCon</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>SourceWriteCon</servlet-name>
+  	<display-name>SourceWriteCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smart.controller.SourceWriteCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SeungHwanCon</servlet-name>
+  	<display-name>SeungHwanCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smart.controller.SeungHwanCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>QuestionWriteCon</servlet-name>
+  	<display-name>QuestionWriteCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smart.controller.QuestionWriteCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>JungHyungWriteCon</servlet-name>
+  	<display-name>JungHyungWriteCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smart.controller.JungHyungWriteCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>InformationWriteCon</servlet-name>
+  	<display-name>InformationWriteCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smart.controller.InformationWriteCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>HaedoWtiteCon</servlet-name>
+  	<display-name>HaedoWtiteCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smart.controller.HaedoWtiteCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>FreeWriteCon</servlet-name>
+  	<display-name>FreeWriteCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smart.controller.FreeWriteCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DownloadCon</servlet-name>
+  	<display-name>DownloadCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smart.controller.DownloadCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>DongwonWriteCon</servlet-name>
+  	<display-name>DongwonWriteCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smart.controller.DongwonWriteCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AnonymousWriteCon</servlet-name>
+  	<display-name>AnonymousWriteCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smart.controller.AnonymousWriteCon</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>JoinCon</servlet-name>
   	<url-pattern>/JoinCon</url-pattern>
@@ -83,5 +143,45 @@
   <servlet-mapping>
   	<servlet-name>UnbiWriteCon</servlet-name>
   	<url-pattern>/UnbiWriteCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SourceWriteCon</servlet-name>
+  	<url-pattern>/SourceWriteCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SeungHwanCon</servlet-name>
+  	<url-pattern>/SeungHwanCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>QuestionWriteCon</servlet-name>
+  	<url-pattern>/QuestionWriteCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>JungHyungWriteCon</servlet-name>
+  	<url-pattern>/JungHyungWriteCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>InformationWriteCon</servlet-name>
+  	<url-pattern>/InformationWriteCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>HaedoWtiteCon</servlet-name>
+  	<url-pattern>/HaedoWtiteCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>FreeWriteCon</servlet-name>
+  	<url-pattern>/FreeWriteCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DownloadCon</servlet-name>
+  	<url-pattern>/DownloadCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DongwonWriteCon</servlet-name>
+  	<url-pattern>/DongwonWriteCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AnonymousWriteCon</servlet-name>
+  	<url-pattern>/AnonymousWriteCon</url-pattern>
   </servlet-mapping>
 </web-app>

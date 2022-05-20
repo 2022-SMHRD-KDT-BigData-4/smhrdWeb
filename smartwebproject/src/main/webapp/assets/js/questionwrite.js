@@ -2,7 +2,7 @@
 let article = $(".wrap.articles")
 let writeArticleButton = "";
 $("#writeArticleButton").on("click", function () {
-        writeArticleButton += "<form action='BoardWriteCon' method='post' class='write'>"
+        writeArticleButton += "<form action='QuestionWriteCon' method='post' class='write'>"
         writeArticleButton += '<p><input name="article_title" autocomplete="off" placeholder="글 제목" class="title">'
         writeArticleButton += '</p>'
         writeArticleButton += '<p>'
@@ -23,7 +23,7 @@ $("#writeArticleButton").on("click", function () {
         writeArticleButton += `<button type='submit' style='float: right; position: relative; bottom: 43px;'>`
         writeArticleButton += `<li title='완료' class='success'></li>`
         writeArticleButton += "</button>"
-        writeArticleButton += `<li title='목록' class='list' onclick='location.href="notice.jsp"'></li>`
+        writeArticleButton += `<li title='목록' class='list' onclick='location.href="question.jsp"'></li>`
         writeArticleButton += "</ul>"
         writeArticleButton += '<div class="clearBothOnly"></div>'
         writeArticleButton += "</form>"

@@ -88,7 +88,10 @@
         </div>
         <div class="wrap articles">
             <a id="writeArticleButton" href="#">새 글을 작성해주세요!</a>
-            
+          <c:if test="${empty bdList }">
+        	<h1 class="small">작성된 글이 없습니다.</h1>
+          </c:if>
+          <c:if test="${bdList != null }">  
            <c:forEach var="i" items="${ypList }" varStatus="status">
            <article>
                 <a class="article" href="board_youngpyo.jsp">
@@ -105,6 +108,7 @@
                 </a>
             </article>
             </c:forEach>
+           </c:if>
         </div>
         
     

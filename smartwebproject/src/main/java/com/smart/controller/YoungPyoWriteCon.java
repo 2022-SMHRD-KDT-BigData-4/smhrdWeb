@@ -39,7 +39,7 @@ public class YoungPyoWriteCon extends HttpServlet {
 			response.sendRedirect("youngpyo.jsp");
 		}else {
 			System.out.println("글작성 실패");
-			response.sendRedirect("boardlist.jsp");
+			response.sendRedirect("youngpyo.jsp");
 		}
 	
 	}

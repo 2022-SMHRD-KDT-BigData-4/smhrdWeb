@@ -87,7 +87,7 @@ public class BoardDAO {
 		return selectYoungpyo;
 	}
 	
-	//영표쌤게시판
+	//운비쌤게시판
 	public List<Board> selectUnbi() {
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		List<Board> selectUnbi = null;
@@ -106,6 +106,208 @@ public class BoardDAO {
 			sqlSession.close();
 		}
 		return selectUnbi;
+	}
+	//공용소스게시판
+	public List<Board> selectSource() {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		List<Board> selectSource = null;
+
+		try {
+			selectSource = sqlSession.selectList("com.smart.domain.BoardDAO.selectSource");
+
+			if (selectSource != null) {
+				sqlSession.commit();
+			} else {
+				sqlSession.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return selectSource;
+	}
+	//승환쌤게시판
+	public List<Board> selectSeungHwan() {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		List<Board> selectSeungHwan = null;
+
+		try {
+			selectSeungHwan = sqlSession.selectList("com.smart.domain.BoardDAO.selectSeungHwan");
+
+			if (selectSeungHwan != null) {
+				sqlSession.commit();
+			} else {
+				sqlSession.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return selectSeungHwan;
+	}
+	//승환쌤게시판
+	public List<Board> selectQuestion() {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		List<Board> selectQuestion = null;
+
+		try {
+			selectQuestion = sqlSession.selectList("com.smart.domain.BoardDAO.selectQuestion");
+
+			if (selectQuestion != null) {
+				sqlSession.commit();
+			} else {
+				sqlSession.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return selectQuestion;
+	}
+	//정형쌤게시판
+	public List<Board> selectJungHyung() {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		List<Board> selectJungHyung = null;
+
+		try {
+			selectJungHyung = sqlSession.selectList("com.smart.domain.BoardDAO.selectJungHyung");
+
+			if (selectJungHyung != null) {
+				sqlSession.commit();
+			} else {
+				sqlSession.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return selectJungHyung;
+	}
+	
+	//정보게시판
+	public List<Board> selectInformation() {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		List<Board> selectInformation = null;
+
+		try {
+			selectInformation = sqlSession.selectList("com.smart.domain.BoardDAO.selectInformation");
+
+			if (selectInformation != null) {
+				sqlSession.commit();
+			} else {
+				sqlSession.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return selectInformation;
+	}
+	//해도쌤 게시판
+	public List<Board> selectHaedo() {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		List<Board> selectHaedo = null;
+
+		try {
+			selectHaedo = sqlSession.selectList("com.smart.domain.BoardDAO.selectHaedo");
+
+			if (selectHaedo != null) {
+				sqlSession.commit();
+			} else {
+				sqlSession.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return selectHaedo;
+	}
+	//자유 게시판
+	public List<Board> selectFree() {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		List<Board> selectFree = null;
+
+		try {
+			selectFree = sqlSession.selectList("com.smart.domain.BoardDAO.selectFree");
+
+			if (selectFree != null) {
+				sqlSession.commit();
+			} else {
+				sqlSession.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return selectFree;
+	}
+	
+	//자료실
+	public List<Board> selectDownload() {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		List<Board> selectDownload = null;
+
+		try {
+			selectDownload = sqlSession.selectList("com.smart.domain.BoardDAO.selectDownload");
+
+			if (selectDownload != null) {
+				sqlSession.commit();
+			} else {
+				sqlSession.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return selectDownload;
+	}
+	//동원쌤 게시판
+	public List<Board> selectDongwon() {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		List<Board> selectDongwon = null;
+
+		try {
+			selectDongwon = sqlSession.selectList("com.smart.domain.BoardDAO.selectDongwon");
+
+			if (selectDongwon != null) {
+				sqlSession.commit();
+			} else {
+				sqlSession.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return selectDongwon;
+	}
+	//익명 게시판
+	public List<Board> selectAnonymous() {
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		List<Board> selectAnonymous = null;
+
+		try {
+			selectAnonymous = sqlSession.selectList("com.smart.domain.BoardDAO.selectAnonymous");
+
+			if (selectAnonymous != null) {
+				sqlSession.commit();
+			} else {
+				sqlSession.rollback();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			sqlSession.close();
+		}
+		return selectAnonymous;
 	}
 	//게시판 조회수
 	public int boardCount(Board b_vo) {

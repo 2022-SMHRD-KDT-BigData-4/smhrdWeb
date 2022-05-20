@@ -10,11 +10,11 @@ import com.smart.domain.Board;
 import com.smart.domain.BoardDAO;
 
 
-public class UnbiWriteCon extends HttpServlet {
+public class InformationWriteCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("[UnbiWriteCon]");
+		System.out.println("[InformationWriteCon]");
 		//post 방식 요청 데이터 인코딩
 		request.setCharacterEncoding("UTF-8");
 		
@@ -37,10 +37,10 @@ public class UnbiWriteCon extends HttpServlet {
 		
 		if(cnt>0) {
 			System.out.println("글작성 성공!");
-			response.sendRedirect("unbi.jsp");
+			response.sendRedirect("information.jsp");
 		}else {
 			System.out.println("글작성 실패");
-			response.sendRedirect("unbi.jsp");
+			response.sendRedirect("information.jsp");
 		}
 	
 	}

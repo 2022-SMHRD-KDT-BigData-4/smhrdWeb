@@ -1,12 +1,19 @@
+<%@page import="java.util.List"%>
+<%@page import="com.smart.domain.MemberDAO"%>
+<%@page import="com.smart.domain.Member"%>
+<%@page import="com.smart.domain.BoardDAO"%>
+<%@page import="com.smart.domain.Board"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자료실</title>
+    <title>자유게시판</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/media.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/cate.css">  
@@ -66,7 +73,14 @@
     </nav>
     <!-- 공지사항 게시글작성 --> 
     <div id="container" class="article">
-    
+            <%
+              Board b_vo = (Board)session.getAttribute("selectDownload");
+              BoardDAO dao = new BoardDAO();
+              List<Board> bdList = dao.selectDownload();
+              System.out.println("글목록 : "+bdList.size());
+              int lsize=bdList.size();
+              pageContext.setAttribute("bdList",bdList);
+            %>
         <div class="wrap title">
             <h1>
                 <a href="download.jsp">자료실</a>
@@ -74,24 +88,30 @@
             <hr>
         </div>
         <div class="wrap articles">
+            <a id="writeArticleButton" href="#">새 글을 작성해주세요!</a>
             
-            <article>
-                <a class="article" href="board_download.jsp">
-                    <div class="attachthumbnail"></div>
-                    <h2 class="medium">[취업지원실]2022 공무원 온라인 솔루션 참여자모집</h2>
-                    <p class="small">공무원 온라인 솔루션 강의 무료 지원(해커스) 자세한 사항은 취업진로포털을 확인하세요!</p>
-                    <time class="small">05/16 17:57</time>
-                    <h3 class="small">교징어</h3>
+          <c:if test="${empty bdList }">
+        	<h1 class="small">작성된 글이 없습니다.</h1>
+          </c:if>
+          <c:if test="${bdList != null }">  
+           <c:forEach var="i" items="${bdList }" varStatus="status">
+           <article>
+                <a class="article" href="download.jsp">
+               		<div class="attachthumbnail"></div>
+                    <h2 class="medium"><c:out value="${i.article_title }"/></h2>
+                    <p class="small"><c:out value="${i.article_content }"/></p>
+                    <time class="small"><c:out value="${i.article_wdate }"/></time>
+                    <h3 class="small"><c:out value="${i.mb_nick }"/></h3>
                     <ul class="status">
-                        <li title="조회수" class="hits">10</li>
                         <li title="좋아요" class="vote">4</li>
                         <li title="댓글" class="comment">2</li>
                     </ul>
                     <hr>
                 </a>
             </article>
+            </c:forEach>
+            </c:if>
         </div>
-        
     
     <!-- 오른쪽사이드 -->
         <div class="rightside">
@@ -167,6 +187,10 @@
 	<script src="assets/js/skel.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<!-- 스크립트 주소 -->
+	<script>
+		let email = '${loginMember.mb_email}';
+		let nick = '${loginMember.mb_nick}';;
+	</script>
 	<script src="assets/js/downloadwrite.js"></script>
 	<script src="assets/js/upload.js"></script>
 </body>

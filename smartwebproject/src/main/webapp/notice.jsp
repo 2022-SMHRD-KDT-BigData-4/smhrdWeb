@@ -108,6 +108,10 @@
               System.out.println("회원목록 : "+mbList.size());
               pageContext.setAttribute("mbList",mbList);
             --%>
+          <c:if test="${empty bdList }">
+        	<h1 class="small">작성된 글이 없습니다.</h1>
+          </c:if>
+          <c:if test="${bdList != null }">  
            <c:forEach var="i" items="${bdList }" varStatus="status">
            <article>
                 <a class="article" href="board_notice.jsp">
@@ -124,6 +128,7 @@
                 </a>
             </article>
             </c:forEach>
+            </c:if>
         </div>
 <!-- 페이징처리 예정
 

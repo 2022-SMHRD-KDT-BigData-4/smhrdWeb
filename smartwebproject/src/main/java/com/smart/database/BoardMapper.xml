@@ -30,6 +30,66 @@
 		where article_type='운비쌤게시판'
 		order by article_seq desc
 	</select>
+		<select id="selectSource" parameterType="String" resultType="com.smart.domain.Board">
+		select article_seq, article_title, article_content, article_cnt, mb_email, mb_nick, article_type, article_likes, article_wdate, article_rdate
+		from tb_community
+		where article_type='공용소스'
+		order by article_seq desc
+	</select>
+	<select id="selectSeungHwan" parameterType="String" resultType="com.smart.domain.Board">
+		select article_seq, article_title, article_content, article_cnt, mb_email, mb_nick, article_type, article_likes, article_wdate, article_rdate
+		from tb_community
+		where article_type='승환쌤게시판'
+		order by article_seq desc
+	</select>
+	<select id="selectQuestion" parameterType="String" resultType="com.smart.domain.Board">
+		select article_seq, article_title, article_content, article_cnt, mb_email, mb_nick, article_type, article_likes, article_wdate, article_rdate
+		from tb_community
+		where article_type='질문게시판'
+		order by article_seq desc
+	</select>
+	<select id="selectJungHyung" parameterType="String" resultType="com.smart.domain.Board">
+		select article_seq, article_title, article_content, article_cnt, mb_email, mb_nick, article_type, article_likes, article_wdate, article_rdate
+		from tb_community
+		where article_type='형쌤게시판'
+		order by article_seq desc
+	</select>
+	<select id="selectInformation" parameterType="String" resultType="com.smart.domain.Board">
+		select article_seq, article_title, article_content, article_cnt, mb_email, mb_nick, article_type, article_likes, article_wdate, article_rdate
+		from tb_community
+		where article_type='정보게시판'
+		order by article_seq desc
+	</select>
+	<select id="selectHaedo" parameterType="String" resultType="com.smart.domain.Board">
+		select article_seq, article_title, article_content, article_cnt, mb_email, mb_nick, article_type, article_likes, article_wdate, article_rdate
+		from tb_community
+		where article_type='해도쌤게시판'
+		order by article_seq desc
+	</select>
+	<select id="selectFree" parameterType="String" resultType="com.smart.domain.Board">
+		select article_seq, article_title, article_content, article_cnt, mb_email, mb_nick, article_type, article_likes, article_wdate, article_rdate
+		from tb_community
+		where article_type='자유게시판'
+		order by article_seq desc
+	</select>
+	<select id="selectDownload" parameterType="String" resultType="com.smart.domain.Board">
+		select article_seq, article_title, article_content, article_cnt, mb_email, mb_nick, article_type, article_likes, article_wdate, article_rdate
+		from tb_community
+		where article_type='자료실'
+		order by article_seq desc
+	</select>
+	<select id="selectDongwon" parameterType="String" resultType="com.smart.domain.Board">
+		select article_seq, article_title, article_content, article_cnt, mb_email, mb_nick, article_type, article_likes, article_wdate, article_rdate
+		from tb_community
+		where article_type='동원쌤게시판'
+		order by article_seq desc
+	</select>
+	<select id="selectAnonymous" parameterType="String" resultType="com.smart.domain.Board">
+		select article_seq, article_title, article_content, article_cnt, mb_email, mb_nick, article_type, article_likes, article_wdate, article_rdate
+		from tb_community
+		where article_type='익명게시판'
+		order by article_seq desc
+	</select>
 	<!-- 게시판 조회수 -->
 	<update id="boardCount" parameterType="String">
 		update tb_community set article_cnt = article_cnt + 1 where article_seq = #{article_seq}
