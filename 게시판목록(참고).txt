@@ -1,0 +1,77 @@
+
+notice.jsp - 공지사항
+board_notice.jsp - IN 
+
+contest.jsp - 공모전
+board_contest.jsp - IN 
+
+--------------------------------------------
+
+free.jsp - 자유게시판
+board_free - IN
+
+information.jsp - 정보게시판 
+board_information.jsp - IN
+
+question.jsp - 질문게시판
+board_question.jsp - IN
+
+anonymous.jsp - 익명게시판 
+board_anonymous.jsp - IN 
+
+smartfood.jsp  - 스마트맛집
+
+--------------------------------------------
+
+download.jsp - 자료실
+board_download.jsp - IN
+
+source.jsp - 공용소스
+board_source.jsp - IN 
+
+--------------------------------------------
+
+timetable.jsp - 시간표 
+
+--------------------------------------------
+
+fan.jsp - 팬게시판
+
+junghyung.jsp - 정형쌤게시판
+
+haedo.jsp - 황해도쌤게시판
+
+seunghwan.jsp - 승환쌤게시판
+
+youngpyo.jsp - 영표쌤게시판
+
+unbi.jsp - 운비쌤게시판
+
+dongwon.jsp - 동원썜게시판
+
+board_dongwon - 동원쌤게시판(IN)
+
+board_junghyung - 정형쌤게시판(IN)
+
+board_youngpyo.jsp - 영표쌤게시판(IN)
+
+board_seunghwan.jsp - 승환쌤게시판(IN)
+
+board_unbi.jsp - 운비쌤게시판(IN)
+
+board_haedo.jsp - 황해도쌤게시판(IN)
+
+
+------------------left bar-------------------
+
+my.jsp - 정보수정 
+
+mycomment.jsp - 내댓글 
+
+myscrap.jsp - 내스크랩
+
+mywrite.jsp - 내글작성 
+
+----------------right bar-------------------
+
+best.jsp - 베스트게시판

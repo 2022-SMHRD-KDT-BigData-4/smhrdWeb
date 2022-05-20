@@ -13,7 +13,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>공지사항(IN)</title>
+    <title>승환쌤(IN)</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/media.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/board.css">
@@ -76,7 +76,7 @@
     
         <div class="wrap title">
             <h1>
-                <a href="notice.jsp">공지사항</a>
+                <a href="seunghwan.jsp">승환쌤게시판</a>
             </h1>
             <hr>
         </div>
@@ -86,11 +86,11 @@
                     <img src="image/사용자정보.png" class="picture large">
                     <div class="profile">
                         <h3 class="large">교징어</h3>
-                        <time class="large">05/16 17:57</time>
-                    </div>
-                    <ul class="status">
                         <button type="submit"><li class="correct">수정</li></button>
                         <button type="submit"><li class="delete">삭제</li></button>
+                    </div>
+                    <ul class="status">
+                        <li class="abuse">신고</li>
                     </ul>
                     <hr>
                     <h2 class="large">[취업지원실]2022 공무원 온라인 솔루션 참여자모집</h2>
@@ -159,7 +159,7 @@
             </article>
             <div class="clearBothOnly"></div>
             <div class="pagination">
-                <a id="goListButton" class="list" href="notice.jsp">글 목록</a><br><br><br>
+                <a id="goListButton" class="list" href="seunghwan.jsp">글 목록</a><br><br><br>
             </div>
         </div>
         
@@ -197,11 +197,11 @@
             <div class="card">
                 <div class="board">
                     <h3>
-                        <a href="best.jsp">BEST게시판
+                        <a href="best..jsp">BEST게시판
                             <span>더보기</span>
                         </a>
                     </h3>
-                    <a href="best.jsp" class="list">
+                    <a href="best..jsp" class="list">
                         <time>05/12 12:50</time>
                         [취업지원실]2022 공무원 온라인 솔루션 참여자모집
                         <hr>
@@ -230,7 +230,7 @@
             </div>
         </div>
     </div>
-        <!-- <script src="assets/js/join.js?=ver123"></script> -->
+    <!-- <script src="assets/js/join.js?=ver123"></script> -->
     <script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>

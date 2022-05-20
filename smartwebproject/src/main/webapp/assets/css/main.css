@@ -81,12 +81,12 @@ nav > div.wrap{
 }
 
 #account a.icon.web {
-    background-image: url('../../image/스마트인재개발원홈페이지.png');
+    background-image: url('/이미지/스마트인재개발원홈페이지.png');
     background-size: 24px 24px;
 }
 
 #account a.icon.my {
-    background-image: url('../../image/내정보.png');
+    background-image: url('/이미지/내정보.png');
     background-size: 24px 24px;
 }
 
@@ -258,13 +258,13 @@ div.card {
     border: 1px solid #d6d6d6;
 }
 #container div.card > div.menus > a.myarticle {
-    background-image: url('../../image/쓴글.png');
+    background-image: url('/이미지/쓴글.png');
 }
 #container div.card > div.menus > a.mycommentarticle {
-    background-image: url('../../image/댓글.png');
+    background-image: url('/이미지/댓글.png');
 }
 #container div.card > div.menus > a.myscrap {
-    background-image: url('../../image/스크랩후.png');
+    background-image: url('/이미지/스크랩후.png');
     border-bottom: 0;
 }
 #container div.card > div.menus > a {
@@ -357,7 +357,7 @@ div.card {
     border: 4px solid #d6d6d6;
     color: #292929;
     font-size: 14px;
-    background: transparent url('../../image/돋보기.png') no-repeat right center;
+    background: transparent url('/이미지/돋보기.png') no-repeat right center;
     background-size: 40px 40px;
 }
 #container div.card h3 {
@@ -393,11 +393,11 @@ div.card {
 }
 #container div.card > div.board > a.article > ul.status > li.vote.active {
     color: #c62917;
-    background-image: url('../../image/돋보기.png');
+    background-image: url('/이미지/돋보기.png');
 }
 #container div.card > div.board > a.article > ul.status > li.comment.active {
     color: #0ca5af;
-    background-image: url('../../image/댓글.png');
+    background-image: url('/이미지/댓글.png');
 }
 #container div.card > div.board > a.article > ul.status > li {
     float: left;
