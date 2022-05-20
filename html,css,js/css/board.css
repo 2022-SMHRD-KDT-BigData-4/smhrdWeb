@@ -67,7 +67,7 @@
     color: #a6a6a6;
     letter-spacing: 0;
 }
-/* 신고 */
+/* 수정 및 삭제 */
 #container > div.articles > article ul.status {
     float: right;
 }
@@ -84,6 +84,15 @@
     background-size: 11px 11px;
     cursor: pointer;
 }
+/* 수정및 삭제 버튼 */
+#container > div.wrap.articles > article > a > ul:nth-child(3) > button:nth-child(1),
+#container > div.wrap.articles > article > a > ul:nth-child(3) > button:nth-child(2){
+    outline: 0px;
+    border: 0px;
+    background-color: white;
+}
+
+
 /* hr */
 #container > div.articles > article hr {
     clear: both;
@@ -99,6 +108,7 @@
 #container > div.articles > article h2 {
     color: #292929;
 }
+
 /* 글내용 */
 #container > div.articles > article p.large {
     padding-bottom: 15px;
