@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace : mapper 식별자(절대로 겹치면 안됨!) : sql을 실행하는 클래스(MemberDAO) 경로 -->
+<mapper namespace="com.smart.domain.BoardDAO">
+	<!-- id : 각 태그를 식별해줄 키값 -->
+	<!-- parameterType : 매개변수자리 -->
+	<!-- resultType : 반환값 -->
+	<!-- 게시판 글작성 -->
+	<insert id="insertBoard" parameterType="com.smart.domain.Board">
+		insert into tb_community(article_seq, article_title, article_content, article_cnt, mb_email, mb_nick, article_type, article_likes, article_wdate, article_rdate) values(tb_community_SEQ.nextval, #{article_title}, #{article_content}, #{article_cnt}, #{mb_email}, #{mb_nick}, #{article_type}, #{article_likes}, sysdate, sysdate)
+	</insert>
+	<!-- 공지사항(hide) -->
+	<select id="selectAll" parameterType="String" resultType="com.smart.domain.Board">
+		select article_seq, article_title, article_content, article_cnt, mb_email, mb_nick, article_type, article_likes, article_wdate, article_rdate
+		from tb_community
+		where article_type='공지사항'
+		order by article_seq desc
+	</select>
+	<!-- 게시판 조회수 -->
+	<update id="boardCount" parameterType="String">
+		update tb_community set article_cnt = article_cnt + 1 where article_seq = #{article_seq}
+	</update>
+
+	
+	<select id="selectBoard" parameterType="String" resultType="com.smart.domain.Board">
+		select * from tb_community where article_seq=#{article_seq} order by desc
+	</select>
+	
+	
+	
+	
+	
+	<!-- <update id="updateMember" parameterType="com.smart.domain.Member"> ////where article_seq = #{article_seq}////  order by article_seq desc limit 10////
+		update web_member set pw=#{pw}, tel=#{tel}, address=#{address} where email=#{email}
+	</update>
+	<select id="selectAll" resultType="com.smart.domain.Member">
+		select * from web_member
+	</select>
+	<delete id = "deleteMember" parameterType="String">
+		 delete from web_member where email = #{email}
+	</delete> -->
+
+</mapper>

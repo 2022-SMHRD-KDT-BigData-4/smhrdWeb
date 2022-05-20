@@ -1,0 +1,67 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>JoinCon</servlet-name>
+  	<display-name>JoinCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smart.controller.JoinCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>BoardWriteCon</servlet-name>
+  	<display-name>BoardWriteCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smart.controller.BoardWriteCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>LoginCon</servlet-name>
+  	<display-name>LoginCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smart.controller.LoginCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>BoardListCon</servlet-name>
+  	<display-name>BoardListCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smart.controller.BoardListCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>BoardCountCon</servlet-name>
+  	<display-name>BoardCountCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smart.controller.BoardCountCon</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>memberUpdateCon</servlet-name>
+  	<display-name>memberUpdateCon</display-name>
+  	<description></description>
+  	<servlet-class>com.smart.controller.memberUpdateCon</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>JoinCon</servlet-name>
+  	<url-pattern>/JoinCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>BoardWriteCon</servlet-name>
+  	<url-pattern>/BoardWriteCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>LoginCon</servlet-name>
+  	<url-pattern>/LoginCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>BoardListCon</servlet-name>
+  	<url-pattern>/BoardListCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>BoardCountCon</servlet-name>
+  	<url-pattern>/BoardCountCon</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>memberUpdateCon</servlet-name>
+  	<url-pattern>/memberUpdateCon</url-pattern>
+  </servlet-mapping>
+</web-app>
