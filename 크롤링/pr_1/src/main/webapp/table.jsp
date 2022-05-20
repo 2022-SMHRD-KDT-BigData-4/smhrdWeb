@@ -8,8 +8,6 @@
 
 
 
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -91,11 +89,12 @@
 			<td>NUM</td>
 
 			<td>제목</td>
-	
+
 			<c:forEach var="b" items="${boardList}" varStatus="status">
 		</tr>
 		<td><c:out value='${b.num }' /></td>
-		<td ><a href="./board.jsp?bcro_title=${b.cro_title }"><c:out value='${b.cro_title }' /></a></td>
+		<td><a href="./board.jsp?bcro_title=${b.cro_title }"><c:out
+					value='${b.cro_title }' /></a></td>
 		</tr>
 		</c:forEach>
 	</table>

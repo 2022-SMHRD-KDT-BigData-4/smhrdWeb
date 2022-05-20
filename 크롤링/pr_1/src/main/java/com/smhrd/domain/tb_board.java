@@ -1,5 +1,7 @@
 package com.smhrd.domain;
 
+import java.sql.Timestamp;
+
 public class tb_board {
 	private String num;
 	private String cro_title;
@@ -13,15 +15,18 @@ public class tb_board {
 	private String cro_awards;
 	private String cro_home;
 	private String crom_apply;
-	
-	public tb_board() {
-		
-	}
-	public tb_board(String num, String cro_title) {
+	private Timestamp cro_date;
+	// title 필드 
+	public tb_board(String cro_title, String cro_img, String cro_field, Timestamp cro_date) {
 		super();
-		this.num = num;
 		this.cro_title = cro_title;
+		this.cro_img = cro_img;
+		this.cro_field = cro_field;
+		this.cro_date = cro_date;
 	}
+	
+	// title get 
+	
 	
 	public String getNum() {
 		return num;
@@ -58,6 +63,9 @@ public class tb_board {
 	}
 	public String getCrom_apply() {
 		return crom_apply;
+	}
+	public Timestamp getCro_date() {
+		return cro_date;
 	}
 	public tb_board(String cro_title, String cro_img, String cro_host, String cro_field, String cro_attend, String cro_app, String cro_period,
 			String cro_area, String cro_awards, String cro_home, String crom_apply) {

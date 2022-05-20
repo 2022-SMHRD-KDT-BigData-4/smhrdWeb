@@ -1,6 +1,6 @@
-@charset "EUC-KR";
+
 * { margin: 0; padding: 0; }
-body,div,nav,aside,article,h1,h2,h3,h4,ol,ul,li,dl,dt,dd,p,span,form,th,td,input,textarea,select,pre,address { color: #666; font-family: "¸¼Àº °íµñ", µ¸¿ò, tahoma; _font-family: µ¸¿ò, tahoma; letter-spacing: -0.5px; }
+body,div,nav,aside,article,h1,h2,h3,h4,ol,ul,li,dl,dt,dd,p,span,form,th,td,input,textarea,select,pre,address { color: #666; font-family: "ë§‘ì€ ê³ ë”•", ë‹ì›€, tahoma; _font-family: ë‹ì›€, tahoma; letter-spacing: -0.5px; }
 body { background-color: #f8f8f8; }
 img { border: 0; }
 div,nav,aside,article,figure { display: block; }
@@ -9,12 +9,12 @@ img,input,select,textarea { vertical-align: middle; }
 a { color: #666; text-decoration: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 input[type="button"],input[type="submit"],input[type="search"] {
-   -webkit-appearance: none;
+	-webkit-appearance: none;
 }
-/* 1300 ºÎÅÍ´Â »ó´Ü ¾ÆÀÌÄÜ 2°³ »ç¶óÁö°Ô */
+/* 1300 ë¶€í„°ëŠ” ìƒë‹¨ ì•„ì´ì½˜ 2ê°œ ì‚¬ë¼ì§€ê²Œ */
 
 @media screen and (max-width:1300px){
-   #account{
-      display: none;
-   }
+	#account{
+		display: none;
+	}
 }

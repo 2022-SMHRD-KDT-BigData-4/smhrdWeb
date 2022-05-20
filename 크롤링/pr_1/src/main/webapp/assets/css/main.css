@@ -1,9 +1,8 @@
-@charset "EUC-KR";
 body.appwebview nav {
     display: none;
 }
 
-/* ·Î°í»çÁø, ½º¸¶Æ®Å¸ÀÓ,½º¸¶Æ®ÀÎÀç°³¹ß¿ø */
+/* ë¡œê³ ì‚¬ì§„, ìŠ¤ë§ˆíŠ¸íƒ€ìž„,ìŠ¤ë§ˆíŠ¸ì¸ìž¬ê°œë°œì› */
 nav > div.wrap{
     margin: 0px auto;
     width: 1300px;
@@ -49,7 +48,7 @@ nav > div.wrap{
     font-weight: bold;
     cursor: pointer;
 }
-/* ³»Á¤º¸, ½º¸¶Æ®ÀÎÀç °³¹ß¿ø È¨ÆäÀÌÁö ¾ÆÀÌÄÜ */
+/* ë‚´ì •ë³´, ìŠ¤ë§ˆíŠ¸ì¸ìž¬ ê°œë°œì› í™ˆíŽ˜ì´ì§€ ì•„ì´ì½˜ */
 #account {
     float: left;
     margin-top:-77px;
@@ -82,29 +81,29 @@ nav > div.wrap{
 }
 
 #account a.icon.web {
-    background-image: url('/ÀÌ¹ÌÁö/½º¸¶Æ®ÀÎÀç°³¹ß¿øÈ¨ÆäÀÌÁö.png');
+    background-image: url('../../images/ìŠ¤ë§ˆíŠ¸ì¸ìž¬ê°œë°œì›í™ˆíŽ˜ì´ì§€.png');
     background-size: 24px 24px;
 }
 
 #account a.icon.my {
-    background-image: url('/ÀÌ¹ÌÁö/³»Á¤º¸.png');
+    background-image: url('../../images/ë‚´ì •ë³´.png');
     background-size: 24px 24px;
 }
 
-/* nav »ó´Ü ¸Þ´º¹Ù */
+/* nav ìƒë‹¨ ë©”ë‰´ë°” */
 #cate{
     margin: 0 auto;
     width: 900px;
     height: 80px;
     font: bold 20px "malgungothic";
-    /* ¸Þ´º¹Ú½º ¸ÞÀÎ¸Þ´º ±ÛÀÚ ¿òÁ÷ÀÌ°Ô À§¾Æ·¡ */
+    /* ë©”ë‰´ë°•ìŠ¤ ë©”ì¸ë©”ë‰´ ê¸€ìž ì›€ì§ì´ê²Œ ìœ„ì•„ëž˜ */
     line-height: 90px;
 }
 #cate ul .menu{
     height: auto;
-    /* ±ÛÀÚ ½ÃÀÛ */
+    /* ê¸€ìž ì‹œìž‘ */
     float: left;
-    /* ±ÛÀÚ °£°Ý */
+    /* ê¸€ìž ê°„ê²© */
     margin-left: 100px;
     position: relative;
     left: 5px;
@@ -125,7 +124,7 @@ nav > div.wrap{
 #cate > ul > li:nth-child(5) > a{
     color: royalblue;
 }
-/* »ó´Ü Ä«Å×°í¸® ¼­ºê¸Þ´º */
+/* ìƒë‹¨ ì¹´í…Œê³ ë¦¬ ì„œë¸Œë©”ë‰´ */
 #cate ul li ul{
     display: none;
     width: 400px;
@@ -168,7 +167,7 @@ nav > div.wrap{
     margin-left: -20px;
 }
 
-/* ½ºÀÎÀç ¹è³Ê */
+/* ìŠ¤ì¸ìž¬ ë°°ë„ˆ */
 #submenu .wrap {
     position: relative;
     left: 10px;
@@ -184,7 +183,7 @@ nav > div.wrap{
 }
 
 
-/* ÇÏ´Ü ÀüÃ¼ */
+/* í•˜ë‹¨ ì „ì²´ */
 #container.article, #container.community {
     position: relative;
     margin: 25px auto 25px auto;
@@ -259,13 +258,13 @@ div.card {
     border: 1px solid #d6d6d6;
 }
 #container div.card > div.menus > a.myarticle {
-    background-image: url(/ÀÌ¹ÌÁö/¾´±Û.png);
+    background-image: url('../../images/ì“´ê¸€.png');
 }
 #container div.card > div.menus > a.mycommentarticle {
-    background-image: url(/ÀÌ¹ÌÁö/´ñ±Û.png);
+    background-image: url('../../images/ëŒ“ê¸€.png');
 }
 #container div.card > div.menus > a.myscrap {
-    background-image: url(/ÀÌ¹ÌÁö/½ºÆ®·¦.png);
+    background-image: url('../../images/ìŠ¤í¬ëž©í›„.png');
     border-bottom: 0;
 }
 #container div.card > div.menus > a {
@@ -281,7 +280,7 @@ div.card {
     background-position: 15px center;
 } 
 
-/* ÇÏ´Ü main */
+/* í•˜ë‹¨ main */
 #container > div.main {
     position: relative;
     left: 215px;
@@ -321,15 +320,7 @@ div.card {
     font-size: 11px;
     letter-spacing: 0;
 }
-/* #container div.card > div.board > a.list > p {
-    height: 17px;
-    line-height: 18px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: #444444;
-    font-size: 14px;
-} */
+
 #container hr {
     clear: both;
     width: 100%;
@@ -358,7 +349,7 @@ div.card {
     border: 4px solid #d6d6d6;
     color: #292929;
     font-size: 14px;
-    background: transparent url('/ÀÌ¹ÌÁö/µ¸º¸±â.png') no-repeat right center;
+    background: transparent url('../../images/ë‹ë³´ê¸°.png') no-repeat right center;
     background-size: 40px 40px;
 }
 #container div.card h3 {
@@ -394,11 +385,11 @@ div.card {
 }
 #container div.card > div.board > a.article > ul.status > li.vote.active {
     color: #c62917;
-    background-image: url('/ÀÌ¹ÌÁö/µ¸º¸±â.png');
+    background-image: url('../../images/ë‹ë³´ê¸°.png');
 }
 #container div.card > div.board > a.article > ul.status > li.comment.active {
     color: #0ca5af;
-    background-image: url('/ÀÌ¹ÌÁö/´ñ±Û.png');
+    background-image: url('../../images/ëŒ“ê¸€.png');
 }
 #container div.card > div.board > a.article > ul.status > li {
     float: left;
@@ -412,4 +403,9 @@ div.card {
     background-repeat: no-repeat;
     background-size: 11px 11px;
     background-position: left center;
+}
+/* ë”ë³´ê¸° */
+#container > div.rightside > div:nth-child(3) > div > h3 > a > span{
+    float: right;
+    color: #a6a6a6;
 }

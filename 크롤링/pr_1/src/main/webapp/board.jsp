@@ -84,25 +84,26 @@
 
 
 
-	<div class="contest_poster">
-		<c:forEach var="bc" items="${cboardList}" varStatus="status">
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-			<c:if test="${bc.cro_title eq bcro_title}">
+		<c:if test="${cro_title eq bcro_title}">
+			<c:forEach var="bc" items="${cboardList}" varStatus="status">
 				
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+
+			<div class="contest_poster">
 				<h1>${bc.cro_title }</h2>
 					<picture> <a href="<c:out value='${bc.cro_home}' />">
 						<img src="<c:out value='${bc.cro_img }' />" class="yamy">
 					</a> </picture>
-	</div>
-	<div class="contest_field">
+			</div>
+			<div class="contest_field">
 		<table>
 			<caption>공모전/대외활동 정보</caption>
 			<tbody>
-
+				
 				<tr>
 					<th>주최</th>
 					<td><c:out value='${bc.cro_host }' /></td>
@@ -142,7 +143,7 @@
 			</tbody>
 
 		</table>
-		</c:if>
 		</c:forEach>
+		</c:if>
 </body>
 </html>
