@@ -82,12 +82,12 @@
         <hr>
     </div>
 <nav class="t_img">
-<a href ="#" class ='teacher'><img src ="image/선생님/김동원.PNG"></a>   
-<a href ="#" class ='teacher'><img src ="image/선생님/정형.png"></a>   <br>
-<a href ="#" class ='teacher'><img src ="image/선생님/임승환.png"></a>   
-<a href ="#" class ='teacher'><img src ="image/선생님/선영표사랑해요.png"></a>
-<a href ="#" class ='teacher'><img src ="image/선생님/황해도.png"></a>
-<a href ="#" class ='teacher'><img src ="image/선생님/김운비.PNG"></a>      
+<a href ="dongwon.jsp" class ='teacher'><img src ="image/선생님/김동원.PNG"></a>   
+<a href ="junghyung.jsp" class ='teacher'><img src ="image/선생님/정형.png"></a>   <br>
+<a href ="seunghwan.jsp" class ='teacher'><img src ="image/선생님/임승환.png"></a>   
+<a href ="youngpyo.jsp" class ='teacher'><img src ="image/선생님/선영표사랑해요.png"></a>
+<a href ="haedo.jsp" class ='teacher'><img src ="image/선생님/황해도.png"></a>
+<a href ="unbi.jsp" class ='teacher'><img src ="image/선생님/김운비.PNG"></a>      
 </nav>
 </body>
 </html>

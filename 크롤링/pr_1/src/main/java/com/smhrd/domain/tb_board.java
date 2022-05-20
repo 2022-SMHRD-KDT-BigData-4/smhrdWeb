@@ -16,12 +16,13 @@ public class tb_board {
 	private String crom_apply;
 	private String cro_date;
 	// title 필드 
-	public tb_board(String cro_title, String cro_img, String cro_field, String cro_date) {
+	public tb_board(String cro_title, String cro_img, String cro_field, String cro_home,String cro_date) {
 		super();
 		this.cro_title = cro_title;
 		this.cro_img = cro_img;
 		this.cro_field = cro_field;
 		this.cro_date = cro_date;
+		this.cro_home = cro_home;
 	}
 	
 	// title get 

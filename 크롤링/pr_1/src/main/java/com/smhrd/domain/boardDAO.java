@@ -32,6 +32,9 @@ public class boardDAO {
 		return boardList;
 	}
 	
+<<<<<<< HEAD
 
+=======
+>>>>>>> 730b9c0b320a313032b25856445853217bc409dc
 
 }

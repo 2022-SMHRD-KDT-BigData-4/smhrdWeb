@@ -38,7 +38,7 @@
     width: 65px;
 }
 /* 버튼  */
-#container > div.wrap.articles > table > tbody > tr:nth-child(2) > td:nth-child(5) > button{
+#container > div.wrap.articles > table > tbody > tr > td:nth-child(5) > button{
     border: 0px;
     outline: 0px;
     font-size: 18px;

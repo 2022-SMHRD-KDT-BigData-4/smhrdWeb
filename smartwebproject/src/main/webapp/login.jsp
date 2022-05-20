@@ -15,7 +15,7 @@
 <body>
 	<div id="container" class="login">
         <h1 class="logo">
-            <a href="LoginTitle.jsp">스마트타임</a>
+            <a href="logintitle.jsp">스마트타임</a>
         </h1>
         <form action="LoginCon" method="post">
             <p class="input">
