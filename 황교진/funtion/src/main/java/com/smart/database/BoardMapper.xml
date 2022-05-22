@@ -23,20 +23,24 @@
 		update tb_community set article_cnt = article_cnt + 1 where article_seq = #{article_seq}
 	</update>
 	
-		
-
 	<select id="selectBoard" parameterType="String" resultType="com.smart.domain.Board">
 		select * from tb_community where article_seq=#{article_seq} order by desc
 	</select>
+	<!-- 공지사항게시판 삭제 -->
+	<delete id="deleteboard" parameterType="String">
+		delete from tb_community where article_seq = #{article_seq} 
+	</delete>	
+
 	
-	<!-- 좋아요 기능 -->
+	
+	<!-- 좋아요 기능
 	<update id="likeCheck" parameterType="HashMap">
 		update tb_community set article_likes = #{artilcle_likes} + 1 where article_email = #{article_email} and article_
-	</update>
-	<!-- 좋아요 취소 기능   -->
+	</update> -->
+	<!-- 좋아요 취소 기능   
 	<update id="dislikeCheck" parameterType="HashMap">
 		update tb_community set article_likes = #{artilcle_likes} - 1 where article_likes
-	</update>
+	</update>-->
 	
 	
 	

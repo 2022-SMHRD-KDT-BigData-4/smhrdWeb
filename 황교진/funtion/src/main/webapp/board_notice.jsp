@@ -1,3 +1,4 @@
+<%@page import="java.io.PrintWriter"%>
 <%@page import="java.util.List"%>
 <%@page import="com.smart.domain.Member"%>
 <%@page import="com.smart.domain.BoardDAO"%>
@@ -18,6 +19,7 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/board.css">
 </head>
 <body>
+ 		
     <!-- 상단 -->
     <nav>
         <div class="wrap">
@@ -80,6 +82,7 @@
             <hr>
         </div>
         <div class="wrap articles">
+        
             <article>
                 <a class="article">
                     <img src="image/사용자정보.png" class="picture large">
@@ -87,10 +90,13 @@
                         <h3 class="large">교징어</h3>
                         <time class="large">05/16 17:57</time>
                     </div>
+                    <c:forEach var="a" items="${bdList}" varStatus="status">
                     <ul class="status">
                         <button type="submit"><li class="correct">수정</li></button>
-                        <button type="submit"><li class="delete">삭제</li></button>
+                        <button type="submit"><li class="delete"><a href="deleteboardCon?boardseq=${a.article_seq}">삭제</a></li></button>
+				<!-- <td><a href="DeleteMessageCon?msgNum=${msg.num}">삭제</a></td>-->
                     </ul>
+                    </c:forEach>
                     <hr>
                     <h2 class="large">[취업지원실]2022 공무원 온라인 솔루션 참여자모집</h2>
                     <p class="large">
@@ -132,6 +138,7 @@
                             <li class="vote commentvote" style="display: list-item;">2</li>
                         </ul>
                     </article>
+                   
                     <!-- 댓글 자식 -->
                     <article class="child">
                         <img src="image/사용자정보.png" class="picture medium" >
@@ -156,6 +163,7 @@
                     </form>
                 </div>
             </article>
+            
             <div class="clearBothOnly"></div>
             <div class="pagination">
                 <a id="goListButton" class="list" href="notice.jsp">글 목록</a><br><br><br>
