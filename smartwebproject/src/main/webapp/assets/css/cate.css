@@ -1,0 +1,268 @@
+/* ??게시판 */
+#container div.wrap{
+    float: none;
+    position: relative;
+    left: 25px;
+    margin-top: 25px;
+    width: 800px;
+}
+#container div.title {
+    margin-bottom: -20px;
+    padding: 15px;
+    border: 1px solid #d6d6d6;
+    box-sizing: border-box;
+}
+#container div.title h1{
+    position: relative;
+    top: 0px !important;
+}
+#container div.title h1 a {
+    color: #292929;
+    font-size: 30px;
+    font-weight: bold;
+}
+/* 글작성 out */
+#writeArticleButton {
+    display: block;
+    margin-bottom: 5px;
+    padding: 0 10px;
+    height: 50px;
+    line-height: 46px;
+    border: 2px solid #d6d6d6;
+    box-sizing: border-box;
+    cursor: text;
+    color: #a6a6a6;
+    font-size: 14px;
+    background: #f9f9f9 url('/이미지/글작성.png') no-repeat right;
+    background-size: 30px 30px;
+}
+
+/* 글작성 in */
+#container > div.articles > form.write {
+    position: relative;
+    margin-bottom: 5px;
+    border: 2px solid #d6d6d6;
+    box-sizing: border-box;
+}
+#container > div.articles > form.write p {
+    padding: 15px;
+    border-bottom: 1px solid #e3e3e3;
+    background-color: #fff;
+}
+#container > div.articles > form.write input.title {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    border: 0;
+    color: #292929;
+    font-size: 16px;
+    font-weight: bold;
+}
+#container > div.articles > form.write p {
+    padding: 15px;
+    border-bottom: 1px solid #e3e3e3;
+    background-color: #fff;
+}
+#container > div.articles > form.write textarea {
+    width: 100%;
+    height: 350px;
+    border: 0;
+    color: #292929;
+    font-size: 14px;
+    resize: none;
+}
+
+.clearBothOnly {
+    clear: both !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 0 !important;
+}
+
+#container > div.wrap.articles > form > ul > button:nth-child(1){
+    float: left;
+}
+#container > div.articles > form.write ul.option li.list {
+    top: -40px;
+    float: right;
+    background-image: url(/이미지/목록.png);
+    background-size: 25px 25px;
+    position: relative;
+    right: 6px;
+}
+
+#container > div.wrap.articles > form > ul > button:nth-child(2){
+    float: right;
+    position: relative;
+    bottom: 43px;
+}
+#container > div.wrap.articles > form > ul > button:nth-child(3){
+    float: right !important;
+}
+#container > div.articles > form.write ul.option li.success {
+    background-color: #c62917;
+    background-image: url('/이미지/글작성.png');
+    background-size: 25px 25px;
+}
+
+#container > div.articles > form.write ul.option li {
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 15px 15px;
+    cursor: pointer;
+}
+
+
+/* 게시물 목록 전체 */
+#container > div.articles > article {
+    margin-bottom: -1px;
+    box-sizing: border-box;
+    border: 1px solid #e3e3e3;
+    background-color: #f8f8f8;
+}
+
+#container > div.articles > article > a.article {
+    display: block;
+    padding: 15px;
+}
+/* 게시글목록 rightside 사진 */
+#container > div.articles > article div.attachthumbnail {
+    float: right;
+    margin: -5px -5px -5px 15px;
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    background-image: url('/이미지/시계.png');
+}
+/* 게시글제목 */
+#container > div.articles > article h2.medium {
+    margin-bottom: 5px;
+    line-height: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    font-weight: normal;
+}
+#container > div.articles > article h2 {
+    color: #292929;
+}
+/* 게시글 내용 */
+#container > div.articles > article p.small {
+    margin-bottom: 5px;
+    max-height: 30px;
+    line-height: 15px;
+    white-space: normal;
+    overflow: hidden;
+    color: #a6a6a6;
+    font-size: 12px;
+}
+#container > div.articles > article p {
+    word-break: break-all;
+}
+/* 날짜 시간 */
+#container > div.articles > article span.category.small, #container > div.articles > article time.small {
+    float: left;
+    margin-right: 5px;
+    height: 15px;
+    line-height: 15px;
+    font-size: 11px;
+}
+#container > div.articles > article time {
+    color: #a6a6a6;
+    letter-spacing: 0;
+}
+/* 닉네임 */
+#container > div.articles > article h3.small {
+    float: left;
+    max-width: 90px;
+    height: 15px;
+    line-height: 15px;
+    font-size: 11px;
+    font-weight: normal;
+    letter-spacing: 0;
+}
+#container > div.articles > article h3 {
+    color: #292929;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* 좋아요 댓글 전체 */
+#container > div.articles > article ul.status {
+    float: right;
+}
+#container > div.articles > article ul.status li {
+    float: left;
+    margin-left: 8px;
+    padding: 0 2px;
+    height: 20px;
+    line-height: 20px;
+    color: #a6a6a6;
+    font-size: 12px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 11px 11px;
+    cursor: pointer;
+}
+/* hr */
+#container > div.articles > article hr {
+    clear: both;
+    height: 0;
+    border: 0;
+}
+/* 조회수 */
+#container > div.articles > article ul.status li.hits {
+    padding-left: 20px;
+    color: #c62917;
+    background-image: url('/이미지/조회수.png');
+    background-size: 15px 15px;
+}
+/* 좋아요 */
+#container > div.articles > article ul.status li.vote {
+    padding-left: 20px;
+    color: #c62917;
+    background-image: url('/이미지/좋아요2.png');
+    background-size: 15px 15px;
+}
+/* 쓴글 */
+#container > div.articles > article ul.status li.comment {
+    padding-left: 20px;
+    color: #0ca5af;
+    background-image: url('/이미지/쓴글.png');
+    background-size: 15px 15px;
+}
+/* 이미지 파일선택 */
+
+.insert {
+    padding: 20px 30px;
+    display: block;
+    width: 540px;
+    margin-left: 128px;
+    margin-right: auto;
+    margin-bottom: 50px;
+    border: 10px solid #dbdbdb;
+    box-sizing: border-box;
+}
+.insert .file-list {
+    height: 100px;
+    overflow: auto;
+    border: 1px solid #989898;
+    padding: 10px;
+}
+.insert .file-list .filebox p {
+    font-size: 14px;
+    margin-top: 10px;
+    display: inline-block;
+}
+.insert .file-list .filebox .delete i{
+    color: #ff5353;
+    margin-left: 5px;
+}
+.fa-minus-square:before {
+    content: url("/이미지/마이너스\ 줄이기.png");
+    position: relative;
+    top: 14px;
+}
