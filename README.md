@@ -1,25 +1,24 @@
-# 서비스명(팀명: MATCH&FIX)
-![image](https://user-images.githubusercontent.com/99248886/166611412-9fc116d1-6efe-40ea-acc6-2ddd7b4f26e7.png)
+# 스마트인재개발원 자체 커뮤니티(팀명: 스마트타임)
+![2차프로젝트_표지](https://user-images.githubusercontent.com/81302006/170196799-f5d98312-39e5-4236-965a-fa22c857877e.PNG
+
 
 ## 1. 프로젝트명
 * 스마트인재개발원 커뮤니티
-* 서비스설명: 
+* 서비스설명: 스마트인재개발원 학생들과 강사가 자유롭게 이용가능한 정보공유 중심의 커뮤니티 사이트
 
 ## 2. 주요기능
-* 기능1
-* 기능2
-* 기능3
-* 기능4
-* 기능5
+* 로그인/회원가입
+* 회원정보 수정
+* 다양한 게시판 (익명게시판, 스마트맛집, 시간표, 팬페이지 등)
+* 글쓰기, 좋아요 기능
 
 ## 3. 개발환경
 |구분|내용|
 |------|---|
-|사용언어|Java, HTML, CSS, JavaScript|
-|사용한 라이브러리| Bootstrap / Kakao Map / etc...|
-|개발도구|Eclipse / RaspberryPi  /  Arduino  /  VisualStudioCode  /  AndroidStudio  / SpringFramework / etc...|
+|사용언어|Java, HTML, CSS, JavaScript, Python|
+|개발도구|Eclipse / VisualStudioCode|
 |서버환경|tomcat 9.0|
-|데이터베이스|Firebase  /  oracle 11g / etc..|
+|데이터베이스|Oracle|
 
 ## 4. 아키텍처(구조)
 ![서비스 아키텍처](https://user-images.githubusercontent.com/25995055/169925538-15867bd9-aa0b-42fc-a39b-88981e926e51.png)
