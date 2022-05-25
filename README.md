@@ -1,6 +1,5 @@
 # 스마트인재개발원 자체 커뮤니티(팀명: 스마트타임)
-![2차프로젝트_표지](https://user-images.githubusercontent.com/81302006/170196799-f5d98312-39e5-4236-965a-fa22c857877e.PNG
-
+![2차프로젝트_표지](https://user-images.githubusercontent.com/81302006/170196799-f5d98312-39e5-4236-965a-fa22c857877e.PNG)
 
 ## 1. 프로젝트명
 * 스마트인재개발원 커뮤니티
@@ -20,39 +19,32 @@
 |서버환경|tomcat 9.0|
 |데이터베이스|Oracle|
 
-## 4. 아키텍처(구조)
-![서비스 아키텍처](https://user-images.githubusercontent.com/25995055/169925538-15867bd9-aa0b-42fc-a39b-88981e926e51.png)
-
-
-## 5. 기능 흐름도
+## 4. 기능 흐름도
 ### 서비스 흐름도(유스케이스)
-#### SW 유스케이스
-![image](https://user-images.githubusercontent.com/99248886/166611717-6a761c62-393f-444b-9945-34d5533b50dc.png)
 #### 서비스 흐름도(웹 화면설계서)
-![image](https://user-images.githubusercontent.com/99248886/166611795-b01ddc4f-8236-4955-ae77-be4b576025d7.png)
+![데이터흐름도_완성](https://user-images.githubusercontent.com/81302006/170202395-f2dcab6a-c8bc-43ea-8c13-be732bf0fb26.png)
 #### ER 다이어그램
-![image](https://user-images.githubusercontent.com/25995055/169925318-102784c2-893f-4fd7-bec9-a54c44b669d4.png)
+![erd 수정](https://user-images.githubusercontent.com/81302006/170202444-1b5376c7-c3f7-4737-a2d2-198e388cc2bf.png)
 
-## 6 SW 동작 화면
+## 5 SW 동작 화면
+### 로그인 타이틀
+![로그인타이틀](https://user-images.githubusercontent.com/81302006/170216112-91d47660-e01e-4013-bf0c-964797fff712.png)
+### 로그인/회원가입/회원정보수정
+![기본정보](https://user-images.githubusercontent.com/81302006/170213345-af80c24a-4b14-4050-a863-124b357e0d6d.png)
+### 메인페이지
+![메인페이지](https://user-images.githubusercontent.com/81302006/170216152-c92b2ca9-49cb-4c67-b077-cd7e55b9833f.png)
+### 공모전게시판/일반게시판/스마트맛집/시간표
+![구현화면](https://user-images.githubusercontent.com/81302006/170217382-5a68d8b2-5c1d-4f4b-aa89-9c081539fc65.jpg)
+### 팬페이지
+![팬클럽게시판](https://user-images.githubusercontent.com/81302006/170217438-55d7b6f9-4c55-47c5-aeb1-671aaa0bf320.png)
 
-### 로그인/회원가입/회원괸리/회원수정/회원탈퇴
-![image](https://user-images.githubusercontent.com/99248886/166612486-a17733a6-a3bb-4fd5-873f-57020ab80a16.png)
+## 6 제작 일정
+![간트차트](https://user-images.githubusercontent.com/81302006/170220473-991e50d1-c130-4fdb-9c6a-55f77942adde.png)
 
-### 옷 정보/코디 추천(날씨, 팁, 오늘의 코디, 참고할 수 있는 코디)
-![image](https://user-images.githubusercontent.com/99248886/166612875-aee9b25d-00ff-4c07-a21f-975ccd8e6a0f.png)
+## 7 팀원 단위 업무 분장 및 결과표
+![image](https://user-images.githubusercontent.com/81302006/170220715-f5099373-92eb-4f4e-9e66-3c27dd66a8c5.png)
 
-### 일정/고객센터
-![image](https://user-images.githubusercontent.com/99248886/166612374-a2f6d85b-501d-4a51-a0d1-8cde0c07ebf2.png)
-
-## 7 제작 일정
-![image](https://user-images.githubusercontent.com/99248886/166612988-dc4d1968-a694-456c-b7fe-b65feef835bb.png)
-
-## 8 팀원 단위 업무 분장 및 결과표
-![image](https://user-images.githubusercontent.com/99248886/166613023-0cd70ef4-9f0d-4f6c-b8b1-7395e67684a1.png)
-
-## 9 트러블슈팅
-개념: 문제 해결을 위해 문제의 원인을 논리적이고 체계적으로 찾는 일이며 제품이나 프로세스의 운영을 재개
-프로젝트 진행하는 동안 발생했던 이슈 중 가장 기억에 남았던 문제와 해결 프로세스 나열(2가지 정도)
+## 8 트러블슈팅
 * 문제1<br>
  문제점 설명 및 해결방안
  
